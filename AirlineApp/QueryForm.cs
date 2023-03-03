@@ -141,6 +141,7 @@ namespace AirlineApp
         }
 
         private void query5Button_Click(object sender, EventArgs e)
+        // Рассчитать убытки компании за счет непроданных билетов за вчерашний день
         {
             string query = "SELECT SUM(TicketPrice) AS Losses FROM Tickets " +
                            "WHERE FlightID IN (SELECT FlightID FROM Flights " +
@@ -159,6 +160,7 @@ namespace AirlineApp
         }
 
         private void query6Button_Click(object sender, EventArgs e)
+        // Вывести список самолетов, которые не ремонтировались в течение более чем 3 лет
         {
             string query = "SELECT RegistrationNumber, ManufactureDate, LastRepairDate " +
                            "FROM Airplanes " +
@@ -177,6 +179,7 @@ namespace AirlineApp
         }
 
         private void query7Button_Click(object sender, EventArgs e)
+        // Определить каким количеством самолетов каждого типа владеет компания
         {
             string query = "SELECT Type, COUNT(*) AS NumberOfAirplanes FROM Airplanes GROUP BY Type";
             DataTable dt = new DataTable();
@@ -193,6 +196,7 @@ namespace AirlineApp
         }
 
         private void query8Button_Click(object sender, EventArgs e)
+        // Определить средний “возраст” самолетов компании
         {
             string query = "SELECT AVG(DATEDIFF(YEAR, ManufactureDate, GETDATE())) AS AverageAge FROM Airplanes";
             DataTable dt = new DataTable();
