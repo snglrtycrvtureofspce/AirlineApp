@@ -1,0 +1,13 @@
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\bin\Debug\AirlineApp.exe.config
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\bin\Debug\AirlineApp.exe
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\bin\Debug\AirlineApp.pdb
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.Properties.Resources.resources
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.csproj.GenerateResource.cache
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.exe
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.pdb
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.TablesForm.resources
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.MainForm.resources
+C:\Users\snglrtycrvtureofspce\Downloads\AirlineApp\obj\Debug\AirlineApp.QueryForm.resources
