@@ -1,6 +1,0 @@
-﻿DELETE FROM Airplanes;
-DELETE FROM Crew;
-DELETE FROM CrewMember;
-DELETE FROM Flights;
-DELETE FROM Passengers;
-DELETE FROM Tickets;
