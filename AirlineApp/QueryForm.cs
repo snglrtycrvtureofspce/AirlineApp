@@ -10,13 +10,14 @@ namespace AirlineApp
     {
         private readonly string _connectionString = System.Configuration.ConfigurationManager.ConnectionStrings
             ["connectionString"].ConnectionString;
+
         public QueryForm()
         {
             InitializeComponent();
         }
 
         private void query1Button_Click(object sender, EventArgs e)
-        // Определить расчётное время полета по всем маршрутам
+            // Определить расчётное время полета по всем маршрутам
         {
             string query = "SELECT FlightID, Distance, Speed " +
                            "FROM Flights " +
@@ -46,7 +47,7 @@ namespace AirlineApp
         }
 
         private void query2Button_Click(object sender, EventArgs e)
-        // Определить расход топлива по всем маршрутам
+            // Определить расход топлива по всем маршрутам
         {
             string query = "SELECT FlightID, Distance, Airplanes.FuelConsumption " +
                            "FROM Flights " +
@@ -76,17 +77,18 @@ namespace AirlineApp
         }
 
         private void query3Button_Click(object sender, EventArgs e)
-        // Вывести экипаж, совершивший максимальное количество полетов
-        // за прошедшую неделю
+            // Вывести экипаж, совершивший максимальное количество полетов
+            // за прошедшую неделю
         {
             string query = @"
-                    SELECT CrewMemberID, FullName, COUNT(*) AS FlightCount
-                    FROM CrewMember
-                    JOIN Crew ON Crew.CrewID = CrewMember.CrewID
-                    JOIN Flights ON Flights.AirplaneID = Crew.AirplaneID
-                    WHERE DATEDIFF(day, Flights.DepartureDate, GETDATE()) <= 7
-                    GROUP BY CrewMemberID, FullName
-                    ORDER BY FlightCount DESC";
+                        SELECT c.CrewID, c.CrewCode, cm.FullName, COUNT(*) AS FlightsCount
+                        FROM Crew c
+                        INNER JOIN Flights f ON c.FlightsID = f.FlightID
+                        INNER JOIN CrewMember cm ON c.CrewMemberID = cm.CrewMemberID
+                        WHERE f.DepartureDate BETWEEN DATEADD(WEEK, -1, GETDATE()) AND GETDATE()
+                        GROUP BY c.CrewID, c.CrewCode, cm.FullName
+                        ORDER BY FlightsCount DESC
+";
 
             DataTable dt = new DataTable();
 
@@ -114,8 +116,8 @@ namespace AirlineApp
         }
 
         private void query4Button_Click(object sender, EventArgs e)
-        // Вывести данные о том, сколько свободных мест оставалось в
-        // самолетах, совершавших полет по одному из рейсов за вчерашний день
+            // Вывести данные о том, сколько свободных мест оставалось в
+            // самолетах, совершавших полет по одному из рейсов за вчерашний день
         {
             DateTime yesterday = DateTime.Today.AddDays(-1);
             string query = "SELECT A.RegistrationNumber, (A.NumberOfSeats - COUNT(P.SeatNumber)) AS FreeSeats " +
@@ -141,7 +143,7 @@ namespace AirlineApp
         }
 
         private void query5Button_Click(object sender, EventArgs e)
-        // Рассчитать убытки компании за счет непроданных билетов за вчерашний день
+            // Рассчитать убытки компании за счет непроданных билетов за вчерашний день
         {
             string query = "SELECT SUM(TicketPrice) AS Losses FROM Tickets " +
                            "WHERE FlightID IN (SELECT FlightID FROM Flights " +
@@ -160,7 +162,7 @@ namespace AirlineApp
         }
 
         private void query6Button_Click(object sender, EventArgs e)
-        // Вывести список самолетов, которые не ремонтировались в течение более чем 3 лет
+            // Вывести список самолетов, которые не ремонтировались в течение более чем 3 лет
         {
             string query = "SELECT RegistrationNumber, ManufactureDate, LastRepairDate " +
                            "FROM Airplanes " +
@@ -179,7 +181,7 @@ namespace AirlineApp
         }
 
         private void query7Button_Click(object sender, EventArgs e)
-        // Определить каким количеством самолетов каждого типа владеет компания
+            // Определить каким количеством самолетов каждого типа владеет компания
         {
             string query = "SELECT Type, COUNT(*) AS NumberOfAirplanes FROM Airplanes GROUP BY Type";
             DataTable dt = new DataTable();
@@ -196,7 +198,7 @@ namespace AirlineApp
         }
 
         private void query8Button_Click(object sender, EventArgs e)
-        // Определить средний “возраст” самолетов компании
+            // Определить средний “возраст” самолетов компании
         {
             string query = "SELECT AVG(DATEDIFF(YEAR, ManufactureDate, GETDATE())) AS AverageAge FROM Airplanes";
             DataTable dt = new DataTable();

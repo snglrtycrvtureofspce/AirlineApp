@@ -31,12 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.changeDBButton = new System.Windows.Forms.Button();
             this.queryButton = new System.Windows.Forms.Button();
+            this.flightsButton = new System.Windows.Forms.Button();
+            this.airplanesButton = new System.Windows.Forms.Button();
+            this.passengersButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // changeDBButton
             // 
-            this.changeDBButton.Location = new System.Drawing.Point(68, 90);
-            this.changeDBButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.changeDBButton.Location = new System.Drawing.Point(13, 13);
+            this.changeDBButton.Margin = new System.Windows.Forms.Padding(4);
             this.changeDBButton.Name = "changeDBButton";
             this.changeDBButton.Size = new System.Drawing.Size(312, 90);
             this.changeDBButton.TabIndex = 0;
@@ -46,7 +49,7 @@
             // 
             // queryButton
             // 
-            this.queryButton.Location = new System.Drawing.Point(524, 90);
+            this.queryButton.Location = new System.Drawing.Point(333, 13);
             this.queryButton.Margin = new System.Windows.Forms.Padding(4);
             this.queryButton.Name = "queryButton";
             this.queryButton.Size = new System.Drawing.Size(312, 90);
@@ -55,16 +58,52 @@
             this.queryButton.UseVisualStyleBackColor = true;
             this.queryButton.Click += new System.EventHandler(this.queryButton_Click);
             // 
+            // flightsButton
+            // 
+            this.flightsButton.Location = new System.Drawing.Point(333, 180);
+            this.flightsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.flightsButton.Name = "flightsButton";
+            this.flightsButton.Size = new System.Drawing.Size(312, 90);
+            this.flightsButton.TabIndex = 3;
+            this.flightsButton.Text = "Полёты";
+            this.flightsButton.UseVisualStyleBackColor = true;
+            this.flightsButton.Click += new System.EventHandler(this.flightsButton_Click);
+            // 
+            // airplanesButton
+            // 
+            this.airplanesButton.Location = new System.Drawing.Point(13, 180);
+            this.airplanesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.airplanesButton.Name = "airplanesButton";
+            this.airplanesButton.Size = new System.Drawing.Size(312, 90);
+            this.airplanesButton.TabIndex = 4;
+            this.airplanesButton.Text = "Самолёты";
+            this.airplanesButton.UseVisualStyleBackColor = true;
+            this.airplanesButton.Click += new System.EventHandler(this.airplanesButton_Click);
+            // 
+            // passengersButton
+            // 
+            this.passengersButton.Location = new System.Drawing.Point(13, 278);
+            this.passengersButton.Margin = new System.Windows.Forms.Padding(4);
+            this.passengersButton.Name = "passengersButton";
+            this.passengersButton.Size = new System.Drawing.Size(312, 90);
+            this.passengersButton.TabIndex = 5;
+            this.passengersButton.Text = "Пассажиры";
+            this.passengersButton.UseVisualStyleBackColor = true;
+            this.passengersButton.Click += new System.EventHandler(this.passengersButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 812);
+            this.ClientSize = new System.Drawing.Size(1294, 639);
+            this.Controls.Add(this.passengersButton);
+            this.Controls.Add(this.airplanesButton);
+            this.Controls.Add(this.flightsButton);
             this.Controls.Add(this.queryButton);
             this.Controls.Add(this.changeDBButton);
             this.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -77,5 +116,8 @@
 
         private System.Windows.Forms.Button changeDBButton;
         private System.Windows.Forms.Button queryButton;
+        private System.Windows.Forms.Button flightsButton;
+        private System.Windows.Forms.Button airplanesButton;
+        private System.Windows.Forms.Button passengersButton;
     }
 }

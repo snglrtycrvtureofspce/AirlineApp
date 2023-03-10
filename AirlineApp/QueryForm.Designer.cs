@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QueryForm));
             this.query1Button = new System.Windows.Forms.Button();
             this.query6Button = new System.Windows.Forms.Button();
@@ -45,7 +44,7 @@
             // query1Button
             // 
             this.query1Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query1Button.Location = new System.Drawing.Point(12, 598);
+            this.query1Button.Location = new System.Drawing.Point(12, 332);
             this.query1Button.Name = "query1Button";
             this.query1Button.Size = new System.Drawing.Size(359, 94);
             this.query1Button.TabIndex = 0;
@@ -56,7 +55,7 @@
             // query6Button
             // 
             this.query6Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query6Button.Location = new System.Drawing.Point(377, 698);
+            this.query6Button.Location = new System.Drawing.Point(377, 432);
             this.query6Button.Name = "query6Button";
             this.query6Button.Size = new System.Drawing.Size(359, 94);
             this.query6Button.TabIndex = 1;
@@ -67,7 +66,7 @@
             // query5Button
             // 
             this.query5Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query5Button.Location = new System.Drawing.Point(12, 698);
+            this.query5Button.Location = new System.Drawing.Point(12, 432);
             this.query5Button.Name = "query5Button";
             this.query5Button.Size = new System.Drawing.Size(359, 94);
             this.query5Button.TabIndex = 2;
@@ -78,7 +77,7 @@
             // query4Button
             // 
             this.query4Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query4Button.Location = new System.Drawing.Point(1148, 598);
+            this.query4Button.Location = new System.Drawing.Point(1107, 332);
             this.query4Button.Name = "query4Button";
             this.query4Button.Size = new System.Drawing.Size(359, 94);
             this.query4Button.TabIndex = 3;
@@ -90,7 +89,7 @@
             // query3Button
             // 
             this.query3Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query3Button.Location = new System.Drawing.Point(783, 598);
+            this.query3Button.Location = new System.Drawing.Point(742, 332);
             this.query3Button.Name = "query3Button";
             this.query3Button.Size = new System.Drawing.Size(359, 94);
             this.query3Button.TabIndex = 4;
@@ -101,7 +100,7 @@
             // query2Button
             // 
             this.query2Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query2Button.Location = new System.Drawing.Point(377, 598);
+            this.query2Button.Location = new System.Drawing.Point(377, 332);
             this.query2Button.Name = "query2Button";
             this.query2Button.Size = new System.Drawing.Size(359, 94);
             this.query2Button.TabIndex = 5;
@@ -112,7 +111,7 @@
             // query7Button
             // 
             this.query7Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query7Button.Location = new System.Drawing.Point(783, 698);
+            this.query7Button.Location = new System.Drawing.Point(742, 432);
             this.query7Button.Name = "query7Button";
             this.query7Button.Size = new System.Drawing.Size(359, 94);
             this.query7Button.TabIndex = 6;
@@ -123,7 +122,7 @@
             // query8Button
             // 
             this.query8Button.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.query8Button.Location = new System.Drawing.Point(1148, 698);
+            this.query8Button.Location = new System.Drawing.Point(1107, 432);
             this.query8Button.Name = "query8Button";
             this.query8Button.Size = new System.Drawing.Size(359, 94);
             this.query8Button.TabIndex = 7;
@@ -135,24 +134,16 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1495, 580);
+            this.dataGridView1.Size = new System.Drawing.Size(1454, 314);
             this.dataGridView1.TabIndex = 9;
             // 
             // QueryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1519, 804);
+            this.ClientSize = new System.Drawing.Size(1478, 543);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.query8Button);
             this.Controls.Add(this.query7Button);
