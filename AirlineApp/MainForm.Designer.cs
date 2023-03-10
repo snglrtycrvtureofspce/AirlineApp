@@ -34,11 +34,13 @@
             this.flightsButton = new System.Windows.Forms.Button();
             this.airplanesButton = new System.Windows.Forms.Button();
             this.passengersButton = new System.Windows.Forms.Button();
+            this.ticketsButton = new System.Windows.Forms.Button();
+            this.crewMemberButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // changeDBButton
             // 
-            this.changeDBButton.Location = new System.Drawing.Point(13, 13);
+            this.changeDBButton.Location = new System.Drawing.Point(387, 536);
             this.changeDBButton.Margin = new System.Windows.Forms.Padding(4);
             this.changeDBButton.Name = "changeDBButton";
             this.changeDBButton.Size = new System.Drawing.Size(312, 90);
@@ -49,7 +51,7 @@
             // 
             // queryButton
             // 
-            this.queryButton.Location = new System.Drawing.Point(333, 13);
+            this.queryButton.Location = new System.Drawing.Point(13, 13);
             this.queryButton.Margin = new System.Windows.Forms.Padding(4);
             this.queryButton.Name = "queryButton";
             this.queryButton.Size = new System.Drawing.Size(312, 90);
@@ -60,7 +62,7 @@
             // 
             // flightsButton
             // 
-            this.flightsButton.Location = new System.Drawing.Point(333, 180);
+            this.flightsButton.Location = new System.Drawing.Point(13, 138);
             this.flightsButton.Margin = new System.Windows.Forms.Padding(4);
             this.flightsButton.Name = "flightsButton";
             this.flightsButton.Size = new System.Drawing.Size(312, 90);
@@ -71,7 +73,7 @@
             // 
             // airplanesButton
             // 
-            this.airplanesButton.Location = new System.Drawing.Point(13, 180);
+            this.airplanesButton.Location = new System.Drawing.Point(707, 438);
             this.airplanesButton.Margin = new System.Windows.Forms.Padding(4);
             this.airplanesButton.Name = "airplanesButton";
             this.airplanesButton.Size = new System.Drawing.Size(312, 90);
@@ -82,7 +84,7 @@
             // 
             // passengersButton
             // 
-            this.passengersButton.Location = new System.Drawing.Point(13, 278);
+            this.passengersButton.Location = new System.Drawing.Point(707, 536);
             this.passengersButton.Margin = new System.Windows.Forms.Padding(4);
             this.passengersButton.Name = "passengersButton";
             this.passengersButton.Size = new System.Drawing.Size(312, 90);
@@ -91,11 +93,35 @@
             this.passengersButton.UseVisualStyleBackColor = true;
             this.passengersButton.Click += new System.EventHandler(this.passengersButton_Click);
             // 
+            // ticketsButton
+            // 
+            this.ticketsButton.Location = new System.Drawing.Point(13, 236);
+            this.ticketsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ticketsButton.Name = "ticketsButton";
+            this.ticketsButton.Size = new System.Drawing.Size(312, 90);
+            this.ticketsButton.TabIndex = 6;
+            this.ticketsButton.Text = "Билеты";
+            this.ticketsButton.UseVisualStyleBackColor = true;
+            this.ticketsButton.Click += new System.EventHandler(this.ticketsButton_Click);
+            // 
+            // crewMemberButton
+            // 
+            this.crewMemberButton.Location = new System.Drawing.Point(13, 334);
+            this.crewMemberButton.Margin = new System.Windows.Forms.Padding(4);
+            this.crewMemberButton.Name = "crewMemberButton";
+            this.crewMemberButton.Size = new System.Drawing.Size(312, 90);
+            this.crewMemberButton.TabIndex = 7;
+            this.crewMemberButton.Text = "Член экипажа";
+            this.crewMemberButton.UseVisualStyleBackColor = true;
+            this.crewMemberButton.Click += new System.EventHandler(this.crewMemberButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1294, 639);
+            this.ClientSize = new System.Drawing.Size(1032, 646);
+            this.Controls.Add(this.crewMemberButton);
+            this.Controls.Add(this.ticketsButton);
             this.Controls.Add(this.passengersButton);
             this.Controls.Add(this.airplanesButton);
             this.Controls.Add(this.flightsButton);
@@ -107,7 +133,6 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
 
         }
@@ -119,5 +144,7 @@
         private System.Windows.Forms.Button flightsButton;
         private System.Windows.Forms.Button airplanesButton;
         private System.Windows.Forms.Button passengersButton;
+        private System.Windows.Forms.Button ticketsButton;
+        private System.Windows.Forms.Button crewMemberButton;
     }
 }

@@ -4,7 +4,8 @@ use airlines
 
 go
 CREATE TABLE Airplanes
-(AirplaneID INT IDENTITY(1,1) PRIMARY KEY,
+(
+AirplaneID INT IDENTITY(1,1) PRIMARY KEY,
 RegistrationNumber VARCHAR(10) NOT NULL,
 Type VARCHAR(50) NOT NULL,
 NumberOfSeats INT NOT NULL,
@@ -18,21 +19,22 @@ FuelConsumption FLOAT NOT NULL
 )
 
 CREATE TABLE CrewMember
-(CrewMemberID INT IDENTITY(1,1) PRIMARY KEY,
+(
+CrewMemberID INT IDENTITY(1,1) PRIMARY KEY,
 FullName VARCHAR(50) NOT NULL,
 PassportData VARCHAR(50) NOT NULL,
 )
 
 CREATE TABLE Passengers
-(PassengerID INT IDENTITY(1,1) PRIMARY KEY,
+(
+PassengerID INT IDENTITY(1,1) PRIMARY KEY,
 FullName VARCHAR(50) NOT NULL,
 PassportData VARCHAR(50) NOT NULL,
-SeatNumber INT NOT NULL,
-SeatType VARCHAR(10) NOT NULL
 )
 
 CREATE TABLE Flights
-(FlightID INT IDENTITY(1,1) PRIMARY KEY,
+(
+FlightID INT IDENTITY(1,1) PRIMARY KEY,
 AirplaneID INT NOT NULL,
 DepartureDate DATE NOT NULL,
 DepartureTime TIME NOT NULL,
@@ -43,7 +45,8 @@ FOREIGN KEY (AirplaneID) REFERENCES Airplanes (AirplaneID)
 )
 
 CREATE TABLE Crew
-(CrewID INT IDENTITY(1,1) PRIMARY KEY,
+(
+CrewID INT IDENTITY(1,1) PRIMARY KEY,
 CrewCode VARCHAR(10) NOT NULL,
 FlightsID INT NOT NULL,
 CrewMemberID INT NOT NULL,
@@ -52,10 +55,13 @@ FOREIGN KEY (CrewMemberID) REFERENCES CrewMember (CrewMemberID)
 )
 
 CREATE TABLE Tickets
-(TicketID INT IDENTITY(1,1) PRIMARY KEY,
+(
+TicketID INT IDENTITY(1,1) PRIMARY KEY,
 FlightID INT NOT NULL,
 PassengerID INT NOT NULL,
 TicketPrice MONEY NOT NULL,
+SeatNumber INT NOT NULL,
+SeatType VARCHAR(10) NOT NULL,
 FOREIGN KEY (FlightID) REFERENCES Flights (FlightID),
 FOREIGN KEY (PassengerID) REFERENCES Passengers (PassengerID)
 )
@@ -73,11 +79,11 @@ VALUES
 ('Konstantin Korzhik', '1357908642'),
 ('Dana Danilovich', '2468013579');
 
-INSERT INTO Passengers (FullName, PassportData, SeatNumber, SeatType)
+INSERT INTO Passengers (FullName, PassportData)
 VALUES
-('Kim Min-ji', '0987654321', 10, 'Economy'),
-('Pham Ngoc Khan', '1234567890', 15, 'Business'),
-('Kang Hae-rin', '2468013579', 7, 'Business');
+('Kim Min-ji', '0987654321'),
+('Pham Ngoc Khan', '1234567890'),
+('Kang Hae-rin', '2468013579');
 
 INSERT INTO Flights (AirplaneID, DepartureDate, DepartureTime, DepartureAirport, ArrivalAirport, Distance)
 VALUES
@@ -91,12 +97,10 @@ VALUES
 ('Crew002', 2,2),
 ('Crew003', 3,3);
 
-INSERT INTO Tickets (FlightID, PassengerID, TicketPrice)
+INSERT INTO Tickets (FlightID, PassengerID, TicketPrice, SeatNumber, SeatType)
 VALUES
-(1, 1, 500),
-(1, 2, 1500),
-(2, 3, 2500),
-(3, 2, 800),
-(3, 3, 1200);
-
-
+(1, 1, 500, 15, 'Business'),
+(1, 2, 1500, 26, 'Economy'),
+(2, 3, 2500, 10, 'Business'),
+(3, 2, 800, 1, 'Business'),
+(3, 3, 1200, 64, 'Economy');

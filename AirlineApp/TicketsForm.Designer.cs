@@ -1,6 +1,6 @@
 ﻿namespace AirlineApp
 {
-    partial class PassengersForm
+    partial class TicketsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassengersForm));
-            System.Windows.Forms.Label fullNameLabel;
-            System.Windows.Forms.Label passportDataLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketsForm));
+            System.Windows.Forms.Label ticketPriceLabel;
+            System.Windows.Forms.Label seatNumberLabel;
+            System.Windows.Forms.Label seatTypeLabel;
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.airlinesDataSet = new AirlineApp.airlinesDataSet();
-            this.passengersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.passengersTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.PassengersTableAdapter();
+            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.TicketsTableAdapter();
             this.tableAdapterManager = new AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager();
-            this.passengersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ticketsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -51,29 +52,34 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.passengersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.passengersDataGridView = new System.Windows.Forms.DataGridView();
+            this.ticketsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.ticketsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameTextBox = new System.Windows.Forms.TextBox();
-            this.passportDataTextBox = new System.Windows.Forms.TextBox();
-            fullNameLabel = new System.Windows.Forms.Label();
-            passportDataLabel = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketPriceTextBox = new System.Windows.Forms.TextBox();
+            this.seatNumberTextBox = new System.Windows.Forms.TextBox();
+            this.seatTypeTextBox = new System.Windows.Forms.TextBox();
+            ticketPriceLabel = new System.Windows.Forms.Label();
+            seatNumberLabel = new System.Windows.Forms.Label();
+            seatTypeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingNavigator)).BeginInit();
-            this.passengersBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingNavigator)).BeginInit();
+            this.ticketsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.addButton.Location = new System.Drawing.Point(12, 309);
+            this.addButton.Location = new System.Drawing.Point(334, 331);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(167, 43);
-            this.addButton.TabIndex = 25;
+            this.addButton.Size = new System.Drawing.Size(157, 30);
+            this.addButton.TabIndex = 26;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -81,10 +87,10 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.deleteButton.Location = new System.Drawing.Point(187, 309);
+            this.deleteButton.Location = new System.Drawing.Point(497, 331);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(167, 43);
-            this.deleteButton.TabIndex = 27;
+            this.deleteButton.Size = new System.Drawing.Size(157, 29);
+            this.deleteButton.TabIndex = 28;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
@@ -92,10 +98,10 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.saveButton.Location = new System.Drawing.Point(12, 358);
+            this.saveButton.Location = new System.Drawing.Point(334, 366);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(342, 54);
-            this.saveButton.TabIndex = 28;
+            this.saveButton.Size = new System.Drawing.Size(320, 37);
+            this.saveButton.TabIndex = 29;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -105,14 +111,14 @@
             this.airlinesDataSet.DataSetName = "airlinesDataSet";
             this.airlinesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // passengersBindingSource
+            // ticketsBindingSource
             // 
-            this.passengersBindingSource.DataMember = "Passengers";
-            this.passengersBindingSource.DataSource = this.airlinesDataSet;
+            this.ticketsBindingSource.DataMember = "Tickets";
+            this.ticketsBindingSource.DataSource = this.airlinesDataSet;
             // 
-            // passengersTableAdapter
+            // ticketsTableAdapter
             // 
-            this.passengersTableAdapter.ClearBeforeFill = true;
+            this.ticketsTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -121,17 +127,17 @@
             this.tableAdapterManager.CrewMemberTableAdapter = null;
             this.tableAdapterManager.CrewTableAdapter = null;
             this.tableAdapterManager.FlightsTableAdapter = null;
-            this.tableAdapterManager.PassengersTableAdapter = this.passengersTableAdapter;
-            this.tableAdapterManager.TicketsTableAdapter = null;
+            this.tableAdapterManager.PassengersTableAdapter = null;
+            this.tableAdapterManager.TicketsTableAdapter = this.ticketsTableAdapter;
             this.tableAdapterManager.UpdateOrder = AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // passengersBindingNavigator
+            // ticketsBindingNavigator
             // 
-            this.passengersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.passengersBindingNavigator.BindingSource = this.passengersBindingSource;
-            this.passengersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.passengersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.passengersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ticketsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.ticketsBindingNavigator.BindingSource = this.ticketsBindingSource;
+            this.ticketsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.ticketsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.ticketsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -143,17 +149,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.passengersBindingNavigatorSaveItem});
-            this.passengersBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.passengersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.passengersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.passengersBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.passengersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.passengersBindingNavigator.Name = "passengersBindingNavigator";
-            this.passengersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.passengersBindingNavigator.Size = new System.Drawing.Size(368, 25);
-            this.passengersBindingNavigator.TabIndex = 29;
-            this.passengersBindingNavigator.Text = "bindingNavigator1";
+            this.ticketsBindingNavigatorSaveItem});
+            this.ticketsBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.ticketsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.ticketsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.ticketsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.ticketsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.ticketsBindingNavigator.Name = "ticketsBindingNavigator";
+            this.ticketsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.ticketsBindingNavigator.Size = new System.Drawing.Size(666, 25);
+            this.ticketsBindingNavigator.TabIndex = 30;
+            this.ticketsBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -240,124 +246,166 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
-            // passengersBindingNavigatorSaveItem
+            // ticketsBindingNavigatorSaveItem
             // 
-            this.passengersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.passengersBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("passengersBindingNavigatorSaveItem.Image")));
-            this.passengersBindingNavigatorSaveItem.Name = "passengersBindingNavigatorSaveItem";
-            this.passengersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.passengersBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.passengersBindingNavigatorSaveItem.Click += new System.EventHandler(this.passengersBindingNavigatorSaveItem_Click_1);
+            this.ticketsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ticketsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ticketsBindingNavigatorSaveItem.Image")));
+            this.ticketsBindingNavigatorSaveItem.Name = "ticketsBindingNavigatorSaveItem";
+            this.ticketsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.ticketsBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.ticketsBindingNavigatorSaveItem.Click += new System.EventHandler(this.ticketsBindingNavigatorSaveItem_Click);
             // 
-            // passengersDataGridView
+            // ticketsDataGridView
             // 
-            this.passengersDataGridView.AutoGenerateColumns = false;
-            this.passengersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.passengersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ticketsDataGridView.AutoGenerateColumns = false;
+            this.ticketsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.passengersDataGridView.DataSource = this.passengersBindingSource;
-            this.passengersDataGridView.Location = new System.Drawing.Point(12, 28);
-            this.passengersDataGridView.Name = "passengersDataGridView";
-            this.passengersDataGridView.Size = new System.Drawing.Size(342, 220);
-            this.passengersDataGridView.TabIndex = 29;
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.ticketsDataGridView.DataSource = this.ticketsBindingSource;
+            this.ticketsDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.ticketsDataGridView.Name = "ticketsDataGridView";
+            this.ticketsDataGridView.Size = new System.Drawing.Size(642, 296);
+            this.ticketsDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PassengerID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PassengerID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "TicketID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "TicketID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FullName";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FlightID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "FlightID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PassportData";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PassportData";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PassengerID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PassengerID";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // fullNameLabel
+            // dataGridViewTextBoxColumn4
             // 
-            fullNameLabel.AutoSize = true;
-            fullNameLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            fullNameLabel.Location = new System.Drawing.Point(12, 260);
-            fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(39, 16);
-            fullNameLabel.TabIndex = 31;
-            fullNameLabel.Text = "ФИО:";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TicketPrice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "TicketPrice";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // fullNameTextBox
+            // dataGridViewTextBoxColumn5
             // 
-            this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.passengersBindingSource, "FullName", true));
-            this.fullNameTextBox.Location = new System.Drawing.Point(145, 257);
-            this.fullNameTextBox.Name = "fullNameTextBox";
-            this.fullNameTextBox.Size = new System.Drawing.Size(209, 20);
-            this.fullNameTextBox.TabIndex = 32;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "SeatNumber";
+            this.dataGridViewTextBoxColumn5.HeaderText = "SeatNumber";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // passportDataLabel
+            // dataGridViewTextBoxColumn6
             // 
-            passportDataLabel.AutoSize = true;
-            passportDataLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            passportDataLabel.Location = new System.Drawing.Point(12, 286);
-            passportDataLabel.Name = "passportDataLabel";
-            passportDataLabel.Size = new System.Drawing.Size(127, 16);
-            passportDataLabel.TabIndex = 33;
-            passportDataLabel.Text = "Номер паспорта:";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "SeatType";
+            this.dataGridViewTextBoxColumn6.HeaderText = "SeatType";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // passportDataTextBox
+            // ticketPriceLabel
             // 
-            this.passportDataTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.passengersBindingSource, "PassportData", true));
-            this.passportDataTextBox.Location = new System.Drawing.Point(145, 283);
-            this.passportDataTextBox.Name = "passportDataTextBox";
-            this.passportDataTextBox.Size = new System.Drawing.Size(209, 20);
-            this.passportDataTextBox.TabIndex = 34;
+            ticketPriceLabel.AutoSize = true;
+            ticketPriceLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            ticketPriceLabel.Location = new System.Drawing.Point(12, 334);
+            ticketPriceLabel.Name = "ticketPriceLabel";
+            ticketPriceLabel.Size = new System.Drawing.Size(103, 16);
+            ticketPriceLabel.TabIndex = 36;
+            ticketPriceLabel.Text = "Цена билета:";
             // 
-            // PassengersForm
+            // ticketPriceTextBox
+            // 
+            this.ticketPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "TicketPrice", true));
+            this.ticketPriceTextBox.Location = new System.Drawing.Point(121, 332);
+            this.ticketPriceTextBox.Name = "ticketPriceTextBox";
+            this.ticketPriceTextBox.Size = new System.Drawing.Size(207, 20);
+            this.ticketPriceTextBox.TabIndex = 37;
+            // 
+            // seatNumberLabel
+            // 
+            seatNumberLabel.AutoSize = true;
+            seatNumberLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            seatNumberLabel.Location = new System.Drawing.Point(12, 360);
+            seatNumberLabel.Name = "seatNumberLabel";
+            seatNumberLabel.Size = new System.Drawing.Size(103, 16);
+            seatNumberLabel.TabIndex = 38;
+            seatNumberLabel.Text = "Номер места:";
+            // 
+            // seatNumberTextBox
+            // 
+            this.seatNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "SeatNumber", true));
+            this.seatNumberTextBox.Location = new System.Drawing.Point(121, 358);
+            this.seatNumberTextBox.Name = "seatNumberTextBox";
+            this.seatNumberTextBox.Size = new System.Drawing.Size(207, 20);
+            this.seatNumberTextBox.TabIndex = 39;
+            // 
+            // seatTypeLabel
+            // 
+            seatTypeLabel.AutoSize = true;
+            seatTypeLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            seatTypeLabel.Location = new System.Drawing.Point(12, 386);
+            seatTypeLabel.Name = "seatTypeLabel";
+            seatTypeLabel.Size = new System.Drawing.Size(87, 16);
+            seatTypeLabel.TabIndex = 40;
+            seatTypeLabel.Text = "Тип места:";
+            // 
+            // seatTypeTextBox
+            // 
+            this.seatTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "SeatType", true));
+            this.seatTypeTextBox.Location = new System.Drawing.Point(121, 384);
+            this.seatTypeTextBox.Name = "seatTypeTextBox";
+            this.seatTypeTextBox.Size = new System.Drawing.Size(207, 20);
+            this.seatTypeTextBox.TabIndex = 41;
+            // 
+            // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 424);
-            this.Controls.Add(fullNameLabel);
-            this.Controls.Add(this.fullNameTextBox);
-            this.Controls.Add(passportDataLabel);
-            this.Controls.Add(this.passportDataTextBox);
-            this.Controls.Add(this.passengersDataGridView);
-            this.Controls.Add(this.passengersBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(666, 412);
+            this.Controls.Add(ticketPriceLabel);
+            this.Controls.Add(this.ticketPriceTextBox);
+            this.Controls.Add(seatNumberLabel);
+            this.Controls.Add(this.seatNumberTextBox);
+            this.Controls.Add(seatTypeLabel);
+            this.Controls.Add(this.seatTypeTextBox);
+            this.Controls.Add(this.ticketsDataGridView);
+            this.Controls.Add(this.ticketsBindingNavigator);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PassengersForm";
+            this.Name = "TicketsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PassengersForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PassengersForm_FormClosing);
-            this.Load += new System.EventHandler(this.PassengersForm_Load);
+            this.Text = "TicketsForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TicketsForm_FormClosing);
+            this.Load += new System.EventHandler(this.TicketsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingNavigator)).EndInit();
-            this.passengersBindingNavigator.ResumeLayout(false);
-            this.passengersBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingNavigator)).EndInit();
+            this.ticketsBindingNavigator.ResumeLayout(false);
+            this.ticketsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button saveButton;
         private airlinesDataSet airlinesDataSet;
-        private System.Windows.Forms.BindingSource passengersBindingSource;
-        private airlinesDataSetTableAdapters.PassengersTableAdapter passengersTableAdapter;
+        private System.Windows.Forms.BindingSource ticketsBindingSource;
+        private airlinesDataSetTableAdapters.TicketsTableAdapter ticketsTableAdapter;
         private airlinesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator passengersBindingNavigator;
+        private System.Windows.Forms.BindingNavigator ticketsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -369,12 +417,16 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton passengersBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView passengersDataGridView;
+        private System.Windows.Forms.ToolStripButton ticketsBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView ticketsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.TextBox fullNameTextBox;
-        private System.Windows.Forms.TextBox passportDataTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.TextBox ticketPriceTextBox;
+        private System.Windows.Forms.TextBox seatNumberTextBox;
+        private System.Windows.Forms.TextBox seatTypeTextBox;
     }
 }

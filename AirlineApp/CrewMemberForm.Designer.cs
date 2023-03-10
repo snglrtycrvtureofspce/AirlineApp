@@ -1,6 +1,6 @@
 ﻿namespace AirlineApp
 {
-    partial class PassengersForm
+    partial class CrewMemberForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassengersForm));
             System.Windows.Forms.Label fullNameLabel;
             System.Windows.Forms.Label passportDataLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrewMemberForm));
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.airlinesDataSet = new AirlineApp.airlinesDataSet();
-            this.passengersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.passengersTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.PassengersTableAdapter();
+            this.crewMemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.crewMemberTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.CrewMemberTableAdapter();
             this.tableAdapterManager = new AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager();
-            this.passengersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.crewMemberBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.passengersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.passengersDataGridView = new System.Windows.Forms.DataGridView();
+            this.crewMemberBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.crewMemberDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,19 +61,39 @@
             fullNameLabel = new System.Windows.Forms.Label();
             passportDataLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingNavigator)).BeginInit();
-            this.passengersBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMemberBindingNavigator)).BeginInit();
+            this.crewMemberBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMemberDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fullNameLabel
+            // 
+            fullNameLabel.AutoSize = true;
+            fullNameLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            fullNameLabel.Location = new System.Drawing.Point(12, 279);
+            fullNameLabel.Name = "fullNameLabel";
+            fullNameLabel.Size = new System.Drawing.Size(39, 16);
+            fullNameLabel.TabIndex = 33;
+            fullNameLabel.Text = "ФИО:";
+            // 
+            // passportDataLabel
+            // 
+            passportDataLabel.AutoSize = true;
+            passportDataLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            passportDataLabel.Location = new System.Drawing.Point(12, 305);
+            passportDataLabel.Name = "passportDataLabel";
+            passportDataLabel.Size = new System.Drawing.Size(127, 16);
+            passportDataLabel.TabIndex = 35;
+            passportDataLabel.Text = "Номер паспорта:";
             // 
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.addButton.Location = new System.Drawing.Point(12, 309);
+            this.addButton.Location = new System.Drawing.Point(12, 327);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(167, 43);
-            this.addButton.TabIndex = 25;
+            this.addButton.Size = new System.Drawing.Size(167, 30);
+            this.addButton.TabIndex = 27;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -81,10 +101,10 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.deleteButton.Location = new System.Drawing.Point(187, 309);
+            this.deleteButton.Location = new System.Drawing.Point(187, 327);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(167, 43);
-            this.deleteButton.TabIndex = 27;
+            this.deleteButton.Size = new System.Drawing.Size(167, 30);
+            this.deleteButton.TabIndex = 29;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
@@ -92,10 +112,10 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.saveButton.Location = new System.Drawing.Point(12, 358);
+            this.saveButton.Location = new System.Drawing.Point(12, 363);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(342, 54);
-            this.saveButton.TabIndex = 28;
+            this.saveButton.Size = new System.Drawing.Size(342, 37);
+            this.saveButton.TabIndex = 30;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -105,33 +125,33 @@
             this.airlinesDataSet.DataSetName = "airlinesDataSet";
             this.airlinesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // passengersBindingSource
+            // crewMemberBindingSource
             // 
-            this.passengersBindingSource.DataMember = "Passengers";
-            this.passengersBindingSource.DataSource = this.airlinesDataSet;
+            this.crewMemberBindingSource.DataMember = "CrewMember";
+            this.crewMemberBindingSource.DataSource = this.airlinesDataSet;
             // 
-            // passengersTableAdapter
+            // crewMemberTableAdapter
             // 
-            this.passengersTableAdapter.ClearBeforeFill = true;
+            this.crewMemberTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AirplanesTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CrewMemberTableAdapter = null;
+            this.tableAdapterManager.CrewMemberTableAdapter = this.crewMemberTableAdapter;
             this.tableAdapterManager.CrewTableAdapter = null;
             this.tableAdapterManager.FlightsTableAdapter = null;
-            this.tableAdapterManager.PassengersTableAdapter = this.passengersTableAdapter;
+            this.tableAdapterManager.PassengersTableAdapter = null;
             this.tableAdapterManager.TicketsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // passengersBindingNavigator
+            // crewMemberBindingNavigator
             // 
-            this.passengersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.passengersBindingNavigator.BindingSource = this.passengersBindingSource;
-            this.passengersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.passengersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.passengersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crewMemberBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.crewMemberBindingNavigator.BindingSource = this.crewMemberBindingSource;
+            this.crewMemberBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.crewMemberBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.crewMemberBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -143,17 +163,42 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.passengersBindingNavigatorSaveItem});
-            this.passengersBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.passengersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.passengersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.passengersBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.passengersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.passengersBindingNavigator.Name = "passengersBindingNavigator";
-            this.passengersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.passengersBindingNavigator.Size = new System.Drawing.Size(368, 25);
-            this.passengersBindingNavigator.TabIndex = 29;
-            this.passengersBindingNavigator.Text = "bindingNavigator1";
+            this.crewMemberBindingNavigatorSaveItem});
+            this.crewMemberBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.crewMemberBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.crewMemberBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.crewMemberBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.crewMemberBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.crewMemberBindingNavigator.Name = "crewMemberBindingNavigator";
+            this.crewMemberBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.crewMemberBindingNavigator.Size = new System.Drawing.Size(363, 25);
+            this.crewMemberBindingNavigator.TabIndex = 31;
+            this.crewMemberBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -182,22 +227,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -205,7 +244,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -214,59 +253,41 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem
+            // crewMemberBindingNavigatorSaveItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.crewMemberBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.crewMemberBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("crewMemberBindingNavigatorSaveItem.Image")));
+            this.crewMemberBindingNavigatorSaveItem.Name = "crewMemberBindingNavigatorSaveItem";
+            this.crewMemberBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.crewMemberBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.crewMemberBindingNavigatorSaveItem.Click += new System.EventHandler(this.crewMemberBindingNavigatorSaveItem_Click);
             // 
-            // bindingNavigatorDeleteItem
+            // crewMemberDataGridView
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
-            // 
-            // passengersBindingNavigatorSaveItem
-            // 
-            this.passengersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.passengersBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("passengersBindingNavigatorSaveItem.Image")));
-            this.passengersBindingNavigatorSaveItem.Name = "passengersBindingNavigatorSaveItem";
-            this.passengersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.passengersBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.passengersBindingNavigatorSaveItem.Click += new System.EventHandler(this.passengersBindingNavigatorSaveItem_Click_1);
-            // 
-            // passengersDataGridView
-            // 
-            this.passengersDataGridView.AutoGenerateColumns = false;
-            this.passengersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.passengersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.crewMemberDataGridView.AutoGenerateColumns = false;
+            this.crewMemberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.crewMemberDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.passengersDataGridView.DataSource = this.passengersBindingSource;
-            this.passengersDataGridView.Location = new System.Drawing.Point(12, 28);
-            this.passengersDataGridView.Name = "passengersDataGridView";
-            this.passengersDataGridView.Size = new System.Drawing.Size(342, 220);
-            this.passengersDataGridView.TabIndex = 29;
+            this.crewMemberDataGridView.DataSource = this.crewMemberBindingSource;
+            this.crewMemberDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.crewMemberDataGridView.Name = "crewMemberDataGridView";
+            this.crewMemberDataGridView.Size = new System.Drawing.Size(342, 235);
+            this.crewMemberDataGridView.TabIndex = 31;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PassengerID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PassengerID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CrewMemberID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CrewMemberID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -282,82 +303,63 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "PassportData";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // fullNameLabel
-            // 
-            fullNameLabel.AutoSize = true;
-            fullNameLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            fullNameLabel.Location = new System.Drawing.Point(12, 260);
-            fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(39, 16);
-            fullNameLabel.TabIndex = 31;
-            fullNameLabel.Text = "ФИО:";
-            // 
             // fullNameTextBox
             // 
-            this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.passengersBindingSource, "FullName", true));
-            this.fullNameTextBox.Location = new System.Drawing.Point(145, 257);
+            this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crewMemberBindingSource, "FullName", true));
+            this.fullNameTextBox.Location = new System.Drawing.Point(145, 275);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(209, 20);
-            this.fullNameTextBox.TabIndex = 32;
-            // 
-            // passportDataLabel
-            // 
-            passportDataLabel.AutoSize = true;
-            passportDataLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            passportDataLabel.Location = new System.Drawing.Point(12, 286);
-            passportDataLabel.Name = "passportDataLabel";
-            passportDataLabel.Size = new System.Drawing.Size(127, 16);
-            passportDataLabel.TabIndex = 33;
-            passportDataLabel.Text = "Номер паспорта:";
+            this.fullNameTextBox.TabIndex = 34;
             // 
             // passportDataTextBox
             // 
-            this.passportDataTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.passengersBindingSource, "PassportData", true));
-            this.passportDataTextBox.Location = new System.Drawing.Point(145, 283);
+            this.passportDataTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crewMemberBindingSource, "PassportData", true));
+            this.passportDataTextBox.Location = new System.Drawing.Point(145, 301);
             this.passportDataTextBox.Name = "passportDataTextBox";
             this.passportDataTextBox.Size = new System.Drawing.Size(209, 20);
-            this.passportDataTextBox.TabIndex = 34;
+            this.passportDataTextBox.TabIndex = 36;
             // 
-            // PassengersForm
+            // CrewMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 424);
+            this.ClientSize = new System.Drawing.Size(363, 411);
             this.Controls.Add(fullNameLabel);
             this.Controls.Add(this.fullNameTextBox);
             this.Controls.Add(passportDataLabel);
             this.Controls.Add(this.passportDataTextBox);
-            this.Controls.Add(this.passengersDataGridView);
-            this.Controls.Add(this.passengersBindingNavigator);
+            this.Controls.Add(this.crewMemberDataGridView);
+            this.Controls.Add(this.crewMemberBindingNavigator);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PassengersForm";
+            this.Name = "CrewMemberForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PassengersForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PassengersForm_FormClosing);
-            this.Load += new System.EventHandler(this.PassengersForm_Load);
+            this.Text = "CrewMemberForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CrewMemberForm_FormClosing);
+            this.Load += new System.EventHandler(this.CrewMemberForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersBindingNavigator)).EndInit();
-            this.passengersBindingNavigator.ResumeLayout(false);
-            this.passengersBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passengersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMemberBindingNavigator)).EndInit();
+            this.crewMemberBindingNavigator.ResumeLayout(false);
+            this.crewMemberBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMemberDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button saveButton;
         private airlinesDataSet airlinesDataSet;
-        private System.Windows.Forms.BindingSource passengersBindingSource;
-        private airlinesDataSetTableAdapters.PassengersTableAdapter passengersTableAdapter;
+        private System.Windows.Forms.BindingSource crewMemberBindingSource;
+        private airlinesDataSetTableAdapters.CrewMemberTableAdapter crewMemberTableAdapter;
         private airlinesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator passengersBindingNavigator;
+        private System.Windows.Forms.BindingNavigator crewMemberBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -369,8 +371,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton passengersBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView passengersDataGridView;
+        private System.Windows.Forms.ToolStripButton crewMemberBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView crewMemberDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

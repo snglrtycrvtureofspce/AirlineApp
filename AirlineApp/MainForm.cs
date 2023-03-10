@@ -31,11 +31,6 @@ namespace AirlineApp
             this.Hide();
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void passengersButton_Click(object sender, EventArgs e)
         {
             PassengersForm passengersForm = new PassengersForm();
@@ -47,6 +42,20 @@ namespace AirlineApp
         {
             FlightsForm flightsForm = new FlightsForm();
             flightsForm.Show();
+            this.Hide();
+        }
+
+        private void ticketsButton_Click(object sender, EventArgs e)
+        {
+            TicketsForm ticketsForm = new TicketsForm();
+            ticketsForm.Show();
+            this.Hide();
+        }
+
+        private void crewMemberButton_Click(object sender, EventArgs e)
+        {
+            CrewMemberForm crewMemberForm = new CrewMemberForm();
+            crewMemberForm.Show();
             this.Hide();
         }
     }

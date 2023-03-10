@@ -37,6 +37,8 @@ C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.csproj.Gener
 C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.csproj.CoreCompileInputs.cache
 C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.exe
 C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.pdb
-C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.FlightsForm.resources
 C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.AirplanesForm.resources
 C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.PassengersForm.resources
+C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.FlightsForm.resources
+C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.TicketsForm.resources
+C:\Users\asp1r\Downloads\AirlineApp\AirlineApp\obj\Debug\AirlineApp.CrewMemberForm.resources

@@ -11,31 +11,30 @@ using System.Windows.Forms;
 
 namespace AirlineApp
 {
-    public partial class FlightsForm : Form
+    public partial class CrewMemberForm : Form
     {
-        public FlightsForm()
+        public CrewMemberForm()
         {
             InitializeComponent();
         }
 
-        private void flightsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void crewMemberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.flightsBindingSource.EndEdit();
+            this.crewMemberBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.airlinesDataSet);
-
         }
 
-        private void FlightsForm_Load(object sender, EventArgs e)
+        private void CrewMemberForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.Flights". При необходимости она может быть перемещена или удалена.
-            this.flightsTableAdapter.Fill(this.airlinesDataSet.Flights);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.CrewMember". При необходимости она может быть перемещена или удалена.
+            this.crewMemberTableAdapter.Fill(this.airlinesDataSet.CrewMember);
 
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            flightsBindingSource.AddNew();
+            crewMemberBindingSource.AddNew();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -43,19 +42,19 @@ namespace AirlineApp
             if (MessageBox.Show("Вы действительно хотите удалить эту запись?", "Удаление записи",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                flightsBindingSource.RemoveCurrent();
-                flightsTableAdapter.Update(airlinesDataSet);
+                crewMemberBindingSource.RemoveCurrent();
+                crewMemberTableAdapter.Update(airlinesDataSet);
                 MessageBox.Show("Запись удалена.");
             }
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            flightsBindingSource.EndEdit();
-            flightsTableAdapter.Update(airlinesDataSet);
+            crewMemberBindingSource.EndEdit();
+            crewMemberTableAdapter.Update(airlinesDataSet);
         }
 
-        private void FlightsForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void CrewMemberForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();

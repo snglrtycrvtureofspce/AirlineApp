@@ -30,6 +30,8 @@ namespace AirlineApp
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.Passengers". При необходимости она может быть перемещена или удалена.
             this.passengersTableAdapter.Fill(this.airlinesDataSet.Passengers);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.Passengers". При необходимости она может быть перемещена или удалена.
+            this.passengersTableAdapter.Fill(this.airlinesDataSet.Passengers);
 
         }
 
@@ -55,6 +57,12 @@ namespace AirlineApp
             passengersTableAdapter.Update(airlinesDataSet);
         }
 
+        private void passengersBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.passengersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.airlinesDataSet);
+        }
         private void PassengersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainForm mainForm = new MainForm();

@@ -81,14 +81,14 @@ namespace AirlineApp
             // за прошедшую неделю
         {
             string query = @"
-                        SELECT c.CrewID, c.CrewCode, cm.FullName, COUNT(*) AS FlightsCount
-                        FROM Crew c
-                        INNER JOIN Flights f ON c.FlightsID = f.FlightID
-                        INNER JOIN CrewMember cm ON c.CrewMemberID = cm.CrewMemberID
-                        WHERE f.DepartureDate BETWEEN DATEADD(WEEK, -1, GETDATE()) AND GETDATE()
-                        GROUP BY c.CrewID, c.CrewCode, cm.FullName
-                        ORDER BY FlightsCount DESC
-";
+                            SELECT c.CrewID, c.CrewCode, cm.FullName, COUNT(*) AS FlightsCount
+                            FROM Crew c
+                            INNER JOIN Flights f ON c.FlightsID = f.FlightID
+                            INNER JOIN CrewMember cm ON c.CrewMemberID = cm.CrewMemberID
+                            WHERE f.DepartureDate BETWEEN DATEADD(WEEK, -1, GETDATE()) AND GETDATE()
+                            GROUP BY c.CrewID, c.CrewCode, cm.FullName
+                            ORDER BY FlightsCount DESC
+                            ";
 
             DataTable dt = new DataTable();
 
@@ -119,27 +119,22 @@ namespace AirlineApp
             // Вывести данные о том, сколько свободных мест оставалось в
             // самолетах, совершавших полет по одному из рейсов за вчерашний день
         {
-            DateTime yesterday = DateTime.Today.AddDays(-1);
-            string query = "SELECT A.RegistrationNumber, (A.NumberOfSeats - COUNT(P.SeatNumber)) AS FreeSeats " +
-                           "FROM Airplanes A " +
-                           "INNER JOIN Flights F ON A.AirplaneID = F.AirplaneID " +
-                           "LEFT JOIN Tickets T ON F.FlightID = T.FlightID " +
-                           "LEFT JOIN Passengers P ON T.PassengerID = P.PassengerID " +
-                           "WHERE F.DepartureDate = @yesterday " +
+            string connectionString = _connectionString;
+            string query = "SELECT A.RegistrationNumber, A.NumberOfSeats - COUNT(T.SeatNumber) AS FreeSeats " +
+                           "FROM Airplanes AS A " +
+                           "INNER JOIN Flights AS F " +
+                           "ON A.AirplaneID = F.AirplaneID " +
+                           "LEFT JOIN Tickets AS T ON F.FlightID = T.FlightID " +
+                           "WHERE F.DepartureDate = DATEADD(day, -1, GETDATE()) " +
                            "GROUP BY A.RegistrationNumber, A.NumberOfSeats";
-
-            DataTable dt = new DataTable();
-
-            using (SqlConnection conn = new SqlConnection(_connectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                cmd.Parameters.AddWithValue("@yesterday", yesterday);
-                conn.Open();
-                da.Fill(dt);
+                connection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
             }
-
-            dataGridView1.DataSource = dt;
         }
 
         private void query5Button_Click(object sender, EventArgs e)

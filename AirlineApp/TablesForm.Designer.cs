@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TablesForm));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.ticketsSaveButton = new System.Windows.Forms.Button();
             this.ticketsCancelButton = new System.Windows.Forms.Button();
             this.ticketsDeleteButton = new System.Windows.Forms.Button();
@@ -71,6 +77,12 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.label6);
+            this.MainPanel.Controls.Add(this.label5);
+            this.MainPanel.Controls.Add(this.label4);
+            this.MainPanel.Controls.Add(this.label3);
+            this.MainPanel.Controls.Add(this.label2);
+            this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Controls.Add(this.ticketsSaveButton);
             this.MainPanel.Controls.Add(this.ticketsCancelButton);
             this.MainPanel.Controls.Add(this.ticketsDeleteButton);
@@ -103,12 +115,72 @@
             this.MainPanel.Controls.Add(this.crewDataGridView);
             this.MainPanel.Location = new System.Drawing.Point(12, 12);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1497, 789);
+            this.MainPanel.Size = new System.Drawing.Size(1157, 549);
             this.MainPanel.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(938, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Flights";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(938, 281);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 18);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Tickets";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(516, 281);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 18);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "CrewMember";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(101, 281);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 18);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Passengers";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(547, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Crew";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(101, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Airplanes";
             // 
             // ticketsSaveButton
             // 
-            this.ticketsSaveButton.Location = new System.Drawing.Point(1422, 513);
+            this.ticketsSaveButton.Location = new System.Drawing.Point(1072, 513);
             this.ticketsSaveButton.Name = "ticketsSaveButton";
             this.ticketsSaveButton.Size = new System.Drawing.Size(75, 23);
             this.ticketsSaveButton.TabIndex = 29;
@@ -118,7 +190,7 @@
             // 
             // ticketsCancelButton
             // 
-            this.ticketsCancelButton.Location = new System.Drawing.Point(1341, 513);
+            this.ticketsCancelButton.Location = new System.Drawing.Point(991, 513);
             this.ticketsCancelButton.Name = "ticketsCancelButton";
             this.ticketsCancelButton.Size = new System.Drawing.Size(75, 23);
             this.ticketsCancelButton.TabIndex = 28;
@@ -128,7 +200,7 @@
             // 
             // ticketsDeleteButton
             // 
-            this.ticketsDeleteButton.Location = new System.Drawing.Point(1259, 513);
+            this.ticketsDeleteButton.Location = new System.Drawing.Point(909, 513);
             this.ticketsDeleteButton.Name = "ticketsDeleteButton";
             this.ticketsDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.ticketsDeleteButton.TabIndex = 27;
@@ -139,7 +211,7 @@
             // ticketsAddButton
             // 
             this.ticketsAddButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ticketsAddButton.Location = new System.Drawing.Point(1178, 513);
+            this.ticketsAddButton.Location = new System.Drawing.Point(828, 513);
             this.ticketsAddButton.Name = "ticketsAddButton";
             this.ticketsAddButton.Size = new System.Drawing.Size(75, 23);
             this.ticketsAddButton.TabIndex = 26;
@@ -149,7 +221,7 @@
             // 
             // crewMemberSaveButton
             // 
-            this.crewMemberSaveButton.Location = new System.Drawing.Point(845, 513);
+            this.crewMemberSaveButton.Location = new System.Drawing.Point(657, 513);
             this.crewMemberSaveButton.Name = "crewMemberSaveButton";
             this.crewMemberSaveButton.Size = new System.Drawing.Size(75, 23);
             this.crewMemberSaveButton.TabIndex = 25;
@@ -159,7 +231,7 @@
             // 
             // crewMemberCancelButton
             // 
-            this.crewMemberCancelButton.Location = new System.Drawing.Point(764, 513);
+            this.crewMemberCancelButton.Location = new System.Drawing.Point(576, 513);
             this.crewMemberCancelButton.Name = "crewMemberCancelButton";
             this.crewMemberCancelButton.Size = new System.Drawing.Size(75, 23);
             this.crewMemberCancelButton.TabIndex = 24;
@@ -169,7 +241,7 @@
             // 
             // crewMemberDeleteButton
             // 
-            this.crewMemberDeleteButton.Location = new System.Drawing.Point(682, 513);
+            this.crewMemberDeleteButton.Location = new System.Drawing.Point(494, 513);
             this.crewMemberDeleteButton.Name = "crewMemberDeleteButton";
             this.crewMemberDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.crewMemberDeleteButton.TabIndex = 23;
@@ -180,7 +252,7 @@
             // crewMemberAddButton
             // 
             this.crewMemberAddButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.crewMemberAddButton.Location = new System.Drawing.Point(601, 513);
+            this.crewMemberAddButton.Location = new System.Drawing.Point(413, 513);
             this.crewMemberAddButton.Name = "crewMemberAddButton";
             this.crewMemberAddButton.Size = new System.Drawing.Size(75, 23);
             this.crewMemberAddButton.TabIndex = 22;
@@ -231,7 +303,7 @@
             // 
             // flightsSaveButton
             // 
-            this.flightsSaveButton.Location = new System.Drawing.Point(1419, 234);
+            this.flightsSaveButton.Location = new System.Drawing.Point(1069, 234);
             this.flightsSaveButton.Name = "flightsSaveButton";
             this.flightsSaveButton.Size = new System.Drawing.Size(75, 23);
             this.flightsSaveButton.TabIndex = 17;
@@ -241,7 +313,7 @@
             // 
             // flightsCancelButton
             // 
-            this.flightsCancelButton.Location = new System.Drawing.Point(1338, 234);
+            this.flightsCancelButton.Location = new System.Drawing.Point(988, 234);
             this.flightsCancelButton.Name = "flightsCancelButton";
             this.flightsCancelButton.Size = new System.Drawing.Size(75, 23);
             this.flightsCancelButton.TabIndex = 16;
@@ -251,7 +323,7 @@
             // 
             // flightsDeleteButton
             // 
-            this.flightsDeleteButton.Location = new System.Drawing.Point(1256, 234);
+            this.flightsDeleteButton.Location = new System.Drawing.Point(906, 234);
             this.flightsDeleteButton.Name = "flightsDeleteButton";
             this.flightsDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.flightsDeleteButton.TabIndex = 15;
@@ -262,7 +334,7 @@
             // flightsAddButton
             // 
             this.flightsAddButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flightsAddButton.Location = new System.Drawing.Point(1175, 234);
+            this.flightsAddButton.Location = new System.Drawing.Point(825, 234);
             this.flightsAddButton.Name = "flightsAddButton";
             this.flightsAddButton.Size = new System.Drawing.Size(75, 23);
             this.flightsAddButton.TabIndex = 14;
@@ -272,7 +344,7 @@
             // 
             // crewSaveButton
             // 
-            this.crewSaveButton.Location = new System.Drawing.Point(845, 234);
+            this.crewSaveButton.Location = new System.Drawing.Point(657, 234);
             this.crewSaveButton.Name = "crewSaveButton";
             this.crewSaveButton.Size = new System.Drawing.Size(75, 23);
             this.crewSaveButton.TabIndex = 13;
@@ -282,7 +354,7 @@
             // 
             // crewCancelButton
             // 
-            this.crewCancelButton.Location = new System.Drawing.Point(764, 234);
+            this.crewCancelButton.Location = new System.Drawing.Point(576, 234);
             this.crewCancelButton.Name = "crewCancelButton";
             this.crewCancelButton.Size = new System.Drawing.Size(75, 23);
             this.crewCancelButton.TabIndex = 12;
@@ -292,7 +364,7 @@
             // 
             // crewDeleteButton
             // 
-            this.crewDeleteButton.Location = new System.Drawing.Point(682, 234);
+            this.crewDeleteButton.Location = new System.Drawing.Point(494, 234);
             this.crewDeleteButton.Name = "crewDeleteButton";
             this.crewDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.crewDeleteButton.TabIndex = 11;
@@ -303,7 +375,7 @@
             // crewAddButton
             // 
             this.crewAddButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.crewAddButton.Location = new System.Drawing.Point(601, 234);
+            this.crewAddButton.Location = new System.Drawing.Point(413, 234);
             this.crewAddButton.Name = "crewAddButton";
             this.crewAddButton.Size = new System.Drawing.Size(75, 23);
             this.crewAddButton.TabIndex = 10;
@@ -355,7 +427,7 @@
             // crewMemberDataGridView
             // 
             this.crewMemberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.crewMemberDataGridView.Location = new System.Drawing.Point(601, 302);
+            this.crewMemberDataGridView.Location = new System.Drawing.Point(413, 302);
             this.crewMemberDataGridView.Name = "crewMemberDataGridView";
             this.crewMemberDataGridView.Size = new System.Drawing.Size(319, 205);
             this.crewMemberDataGridView.TabIndex = 5;
@@ -363,7 +435,7 @@
             // flightsDataGridView
             // 
             this.flightsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.flightsDataGridView.Location = new System.Drawing.Point(1175, 23);
+            this.flightsDataGridView.Location = new System.Drawing.Point(825, 23);
             this.flightsDataGridView.Name = "flightsDataGridView";
             this.flightsDataGridView.Size = new System.Drawing.Size(319, 205);
             this.flightsDataGridView.TabIndex = 4;
@@ -379,7 +451,7 @@
             // ticketsDataGridView
             // 
             this.ticketsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ticketsDataGridView.Location = new System.Drawing.Point(1178, 302);
+            this.ticketsDataGridView.Location = new System.Drawing.Point(828, 302);
             this.ticketsDataGridView.Name = "ticketsDataGridView";
             this.ticketsDataGridView.Size = new System.Drawing.Size(319, 205);
             this.ticketsDataGridView.TabIndex = 2;
@@ -395,7 +467,7 @@
             // crewDataGridView
             // 
             this.crewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.crewDataGridView.Location = new System.Drawing.Point(601, 23);
+            this.crewDataGridView.Location = new System.Drawing.Point(413, 23);
             this.crewDataGridView.Name = "crewDataGridView";
             this.crewDataGridView.Size = new System.Drawing.Size(319, 205);
             this.crewDataGridView.TabIndex = 0;
@@ -404,7 +476,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1521, 813);
+            this.ClientSize = new System.Drawing.Size(1172, 567);
             this.Controls.Add(this.MainPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TablesForm";
@@ -413,6 +485,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TablesForm_FormClosing);
             this.Load += new System.EventHandler(this.TablesForm_Load);
             this.MainPanel.ResumeLayout(false);
+            this.MainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.crewMemberDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengersDataGridView)).EndInit();
@@ -456,6 +529,12 @@
         private System.Windows.Forms.Button crewCancelButton;
         private System.Windows.Forms.Button crewDeleteButton;
         private System.Windows.Forms.Button crewAddButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
