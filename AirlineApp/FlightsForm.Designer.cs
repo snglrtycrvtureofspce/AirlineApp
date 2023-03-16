@@ -34,7 +34,9 @@
             System.Windows.Forms.Label departureAirportLabel;
             System.Windows.Forms.Label arrivalAirportLabel;
             System.Windows.Forms.Label distanceLabel;
+            System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightsForm));
+            System.Windows.Forms.Label label2;
             this.airlinesDataSet = new AirlineApp.airlinesDataSet();
             this.flightsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightsTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.FlightsTableAdapter();
@@ -68,11 +70,15 @@
             this.arrivalAirportTextBox = new System.Windows.Forms.TextBox();
             this.distanceTextBox = new System.Windows.Forms.TextBox();
             this.departureTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
+            this.tbFilter = new System.Windows.Forms.TextBox();
             departureDateLabel = new System.Windows.Forms.Label();
             departureTimeLabel = new System.Windows.Forms.Label();
             departureAirportLabel = new System.Windows.Forms.Label();
             arrivalAirportLabel = new System.Windows.Forms.Label();
             distanceLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).BeginInit();
@@ -129,6 +135,16 @@
             distanceLabel.Size = new System.Drawing.Size(95, 16);
             distanceLabel.TabIndex = 41;
             distanceLabel.Text = "Расстояние:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label1.Location = new System.Drawing.Point(12, 464);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(95, 16);
+            label1.TabIndex = 45;
+            label1.Text = "Фильтрация:";
             // 
             // airlinesDataSet
             // 
@@ -345,9 +361,9 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.addButton.Location = new System.Drawing.Point(391, 323);
+            this.addButton.Location = new System.Drawing.Point(391, 324);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(173, 43);
+            this.addButton.Size = new System.Drawing.Size(173, 46);
             this.addButton.TabIndex = 26;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
@@ -356,9 +372,9 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.deleteButton.Location = new System.Drawing.Point(577, 323);
+            this.deleteButton.Location = new System.Drawing.Point(577, 324);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(173, 43);
+            this.deleteButton.Size = new System.Drawing.Size(173, 46);
             this.deleteButton.TabIndex = 28;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -418,11 +434,45 @@
             this.departureTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.departureTimeDateTimePicker.TabIndex = 43;
             // 
+            // cbFilter
+            // 
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "DepartureAirport",
+            "ArrivalAirport"});
+            this.cbFilter.Location = new System.Drawing.Point(476, 462);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(274, 21);
+            this.cbFilter.TabIndex = 44;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            // 
+            // tbFilter
+            // 
+            this.tbFilter.Location = new System.Drawing.Point(185, 462);
+            this.tbFilter.Name = "tbFilter";
+            this.tbFilter.Size = new System.Drawing.Size(200, 20);
+            this.tbFilter.TabIndex = 46;
+            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label2.Location = new System.Drawing.Point(391, 464);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(79, 16);
+            label2.TabIndex = 55;
+            label2.Text = "Критерий:";
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 455);
+            this.ClientSize = new System.Drawing.Size(757, 491);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.tbFilter);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.departureTimeDateTimePicker);
             this.Controls.Add(departureDateLabel);
             this.Controls.Add(this.departureDateDateTimePicker);
@@ -491,5 +541,7 @@
         private System.Windows.Forms.TextBox arrivalAirportTextBox;
         private System.Windows.Forms.TextBox distanceTextBox;
         private System.Windows.Forms.DateTimePicker departureTimeDateTimePicker;
+        private System.Windows.Forms.ComboBox cbFilter;
+        private System.Windows.Forms.TextBox tbFilter;
     }
 }

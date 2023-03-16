@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.changeDBButton = new System.Windows.Forms.Button();
             this.queryButton = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.passengersButton = new System.Windows.Forms.Button();
             this.ticketsButton = new System.Windows.Forms.Button();
             this.crewMemberButton = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // changeDBButton
@@ -115,11 +117,22 @@
             this.crewMemberButton.UseVisualStyleBackColor = true;
             this.crewMemberButton.Click += new System.EventHandler(this.crewMemberButton_Click);
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label2.Location = new System.Drawing.Point(71, 118);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(191, 16);
+            label2.TabIndex = 55;
+            label2.Text = "Результирующие таблицы:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 646);
+            this.Controls.Add(label2);
             this.Controls.Add(this.crewMemberButton);
             this.Controls.Add(this.ticketsButton);
             this.Controls.Add(this.passengersButton);
@@ -133,7 +146,9 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

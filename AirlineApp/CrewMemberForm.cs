@@ -60,5 +60,23 @@ namespace AirlineApp
             mainForm.Show();
             this.Hide();
         }
+
+        private void tbFilter_TextChanged(object sender, EventArgs e)
+        {
+            if (cbFilter.SelectedItem == null) return;
+            var bs = (BindingSource)crewMemberDataGridView.DataSource;
+            var dv = (DataView)bs.List;
+            var selectedText = cbFilter.SelectedItem.ToString().ToLower();
+            dv.RowFilter = $"{selectedText} LIKE '%{tbFilter.Text.ToLower()}%'";
+        }
+
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbFilter.SelectedItem == null) return;
+            var bs = (BindingSource)crewMemberDataGridView.DataSource;
+            var dv = (DataView)bs.List;
+            var selectedText = cbFilter.SelectedItem.ToString().ToLower();
+            dv.RowFilter = $"{selectedText} LIKE '%{tbFilter.Text.ToLower()}%'";
+        }
     }
 }

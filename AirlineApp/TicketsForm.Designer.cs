@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketsForm));
             System.Windows.Forms.Label ticketPriceLabel;
             System.Windows.Forms.Label seatNumberLabel;
             System.Windows.Forms.Label seatTypeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketsForm));
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -41,17 +43,17 @@
             this.ticketsTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.TicketsTableAdapter();
             this.tableAdapterManager = new AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager();
             this.ticketsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ticketsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ticketsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,15 +65,49 @@
             this.ticketPriceTextBox = new System.Windows.Forms.TextBox();
             this.seatNumberTextBox = new System.Windows.Forms.TextBox();
             this.seatTypeTextBox = new System.Windows.Forms.TextBox();
+            this.tbFilter = new System.Windows.Forms.TextBox();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
             ticketPriceLabel = new System.Windows.Forms.Label();
             seatNumberLabel = new System.Windows.Forms.Label();
             seatTypeLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingNavigator)).BeginInit();
             this.ticketsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ticketPriceLabel
+            // 
+            ticketPriceLabel.AutoSize = true;
+            ticketPriceLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            ticketPriceLabel.Location = new System.Drawing.Point(12, 334);
+            ticketPriceLabel.Name = "ticketPriceLabel";
+            ticketPriceLabel.Size = new System.Drawing.Size(103, 16);
+            ticketPriceLabel.TabIndex = 36;
+            ticketPriceLabel.Text = "Цена билета:";
+            // 
+            // seatNumberLabel
+            // 
+            seatNumberLabel.AutoSize = true;
+            seatNumberLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            seatNumberLabel.Location = new System.Drawing.Point(12, 360);
+            seatNumberLabel.Name = "seatNumberLabel";
+            seatNumberLabel.Size = new System.Drawing.Size(103, 16);
+            seatNumberLabel.TabIndex = 38;
+            seatNumberLabel.Text = "Номер места:";
+            // 
+            // seatTypeLabel
+            // 
+            seatTypeLabel.AutoSize = true;
+            seatTypeLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
+            seatTypeLabel.Location = new System.Drawing.Point(12, 386);
+            seatTypeLabel.Name = "seatTypeLabel";
+            seatTypeLabel.Size = new System.Drawing.Size(87, 16);
+            seatTypeLabel.TabIndex = 40;
+            seatTypeLabel.Text = "Тип места:";
             // 
             // addButton
             // 
@@ -89,7 +125,7 @@
             this.deleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.deleteButton.Location = new System.Drawing.Point(497, 331);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(157, 29);
+            this.deleteButton.Size = new System.Drawing.Size(157, 30);
             this.deleteButton.TabIndex = 28;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -98,7 +134,7 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.saveButton.Location = new System.Drawing.Point(334, 366);
+            this.saveButton.Location = new System.Drawing.Point(334, 367);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(320, 37);
             this.saveButton.TabIndex = 29;
@@ -161,6 +197,31 @@
             this.ticketsBindingNavigator.TabIndex = 30;
             this.ticketsBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -188,22 +249,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -211,7 +266,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -220,38 +275,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // ticketsBindingNavigatorSaveItem
             // 
             this.ticketsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ticketsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ticketsBindingNavigatorSaveItem.Image")));
             this.ticketsBindingNavigatorSaveItem.Name = "ticketsBindingNavigatorSaveItem";
-            this.ticketsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.ticketsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.ticketsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.ticketsBindingNavigatorSaveItem.Click += new System.EventHandler(this.ticketsBindingNavigatorSaveItem_Click);
             // 
@@ -309,16 +346,6 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "SeatType";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // ticketPriceLabel
-            // 
-            ticketPriceLabel.AutoSize = true;
-            ticketPriceLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            ticketPriceLabel.Location = new System.Drawing.Point(12, 334);
-            ticketPriceLabel.Name = "ticketPriceLabel";
-            ticketPriceLabel.Size = new System.Drawing.Size(103, 16);
-            ticketPriceLabel.TabIndex = 36;
-            ticketPriceLabel.Text = "Цена билета:";
-            // 
             // ticketPriceTextBox
             // 
             this.ticketPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "TicketPrice", true));
@@ -326,16 +353,6 @@
             this.ticketPriceTextBox.Name = "ticketPriceTextBox";
             this.ticketPriceTextBox.Size = new System.Drawing.Size(207, 20);
             this.ticketPriceTextBox.TabIndex = 37;
-            // 
-            // seatNumberLabel
-            // 
-            seatNumberLabel.AutoSize = true;
-            seatNumberLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            seatNumberLabel.Location = new System.Drawing.Point(12, 360);
-            seatNumberLabel.Name = "seatNumberLabel";
-            seatNumberLabel.Size = new System.Drawing.Size(103, 16);
-            seatNumberLabel.TabIndex = 38;
-            seatNumberLabel.Text = "Номер места:";
             // 
             // seatNumberTextBox
             // 
@@ -345,16 +362,6 @@
             this.seatNumberTextBox.Size = new System.Drawing.Size(207, 20);
             this.seatNumberTextBox.TabIndex = 39;
             // 
-            // seatTypeLabel
-            // 
-            seatTypeLabel.AutoSize = true;
-            seatTypeLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            seatTypeLabel.Location = new System.Drawing.Point(12, 386);
-            seatTypeLabel.Name = "seatTypeLabel";
-            seatTypeLabel.Size = new System.Drawing.Size(87, 16);
-            seatTypeLabel.TabIndex = 40;
-            seatTypeLabel.Text = "Тип места:";
-            // 
             // seatTypeTextBox
             // 
             this.seatTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "SeatType", true));
@@ -363,11 +370,54 @@
             this.seatTypeTextBox.Size = new System.Drawing.Size(207, 20);
             this.seatTypeTextBox.TabIndex = 41;
             // 
+            // tbFilter
+            // 
+            this.tbFilter.Location = new System.Drawing.Point(121, 416);
+            this.tbFilter.Name = "tbFilter";
+            this.tbFilter.Size = new System.Drawing.Size(207, 20);
+            this.tbFilter.TabIndex = 49;
+            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label1.Location = new System.Drawing.Point(12, 418);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(95, 16);
+            label1.TabIndex = 48;
+            label1.Text = "Фильтрация:";
+            // 
+            // cbFilter
+            // 
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "SeatType"});
+            this.cbFilter.Location = new System.Drawing.Point(419, 416);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(235, 21);
+            this.cbFilter.TabIndex = 47;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label2.Location = new System.Drawing.Point(334, 418);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(79, 16);
+            label2.TabIndex = 50;
+            label2.Text = "Критерий:";
+            // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 412);
+            this.ClientSize = new System.Drawing.Size(666, 446);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.tbFilter);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.cbFilter);
             this.Controls.Add(ticketPriceLabel);
             this.Controls.Add(this.ticketPriceTextBox);
             this.Controls.Add(seatNumberLabel);
@@ -428,5 +478,7 @@
         private System.Windows.Forms.TextBox ticketPriceTextBox;
         private System.Windows.Forms.TextBox seatNumberTextBox;
         private System.Windows.Forms.TextBox seatTypeTextBox;
+        private System.Windows.Forms.TextBox tbFilter;
+        private System.Windows.Forms.ComboBox cbFilter;
     }
 }

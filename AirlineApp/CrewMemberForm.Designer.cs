@@ -32,6 +32,8 @@
             System.Windows.Forms.Label fullNameLabel;
             System.Windows.Forms.Label passportDataLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrewMemberForm));
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label1;
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -58,8 +60,12 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.passportDataTextBox = new System.Windows.Forms.TextBox();
+            this.tbFilter = new System.Windows.Forms.TextBox();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
             fullNameLabel = new System.Windows.Forms.Label();
             passportDataLabel = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewMemberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewMemberBindingNavigator)).BeginInit();
@@ -319,11 +325,54 @@
             this.passportDataTextBox.Size = new System.Drawing.Size(209, 20);
             this.passportDataTextBox.TabIndex = 36;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label2.Location = new System.Drawing.Point(9, 440);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(79, 16);
+            label2.TabIndex = 54;
+            label2.Text = "Критерий:";
+            // 
+            // tbFilter
+            // 
+            this.tbFilter.Location = new System.Drawing.Point(110, 408);
+            this.tbFilter.Name = "tbFilter";
+            this.tbFilter.Size = new System.Drawing.Size(244, 20);
+            this.tbFilter.TabIndex = 53;
+            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Courier New", 9.75F);
+            label1.Location = new System.Drawing.Point(9, 410);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(95, 16);
+            label1.TabIndex = 52;
+            label1.Text = "Фильтрация:";
+            // 
+            // cbFilter
+            // 
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "FullName"});
+            this.cbFilter.Location = new System.Drawing.Point(110, 438);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(244, 21);
+            this.cbFilter.TabIndex = 51;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            // 
             // CrewMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 411);
+            this.ClientSize = new System.Drawing.Size(363, 468);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.tbFilter);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.cbFilter);
             this.Controls.Add(fullNameLabel);
             this.Controls.Add(this.fullNameTextBox);
             this.Controls.Add(passportDataLabel);
@@ -378,5 +427,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.TextBox passportDataTextBox;
+        private System.Windows.Forms.TextBox tbFilter;
+        private System.Windows.Forms.ComboBox cbFilter;
     }
 }

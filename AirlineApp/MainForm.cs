@@ -58,5 +58,10 @@ namespace AirlineApp
             crewMemberForm.Show();
             this.Hide();
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
