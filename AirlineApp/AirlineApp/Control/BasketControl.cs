@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AirlineApp.Control.ElControls;
+using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AirlineApp.Control
@@ -21,6 +23,8 @@ namespace AirlineApp.Control
                 if (gunaTextBox1.Text != "" && gunaTextBox2.Text != "" && gunaTextBox3.Text != "")
                 {
                     MessageBox.Show("Заказ успешно оформлен.");
+
+
 
                     SqlConnection connection = new SqlConnection(_connectionString);
                     try
@@ -50,10 +54,18 @@ namespace AirlineApp.Control
 
         private void BasketControl_Load(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            var a = rnd.Next(500, 5000);
-            gunaLabel6.Text = a.ToString() + " руб.";
-            gunaLabel7.Text = a.ToString() + " руб.";
+            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [Tickets]", connection);
+            connection.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                gunaLabel6.Text = reader[3].ToString() + " руб.";
+                gunaLabel7.Text = reader[3].ToString() + " руб.";
+            }
+            reader.Close();
+            connection.Close();
         }
     }
 }

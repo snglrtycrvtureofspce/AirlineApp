@@ -135,6 +135,12 @@
     <Compile Include="Form\AirplanesForm.Designer.cs">
       <DependentUpon>AirplanesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\crewAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\crewAdminForm.Designer.cs">
+      <DependentUpon>crewAdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\CrewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     </Compile>
     <Compile Include="Form\CrewMemberForm.Designer.cs">
       <DependentUpon>CrewMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\flightsAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\flightsAdminForm.Designer.cs">
+      <DependentUpon>flightsAdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FlightsForm.cs">
       <SubType>Form</SubType>
@@ -164,6 +176,12 @@
     </Compile>
     <Compile Include="Form\QueryForm.Designer.cs">
       <DependentUpon>QueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ticketsAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ticketsAdminForm.Designer.cs">
+      <DependentUpon>ticketsAdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\TicketsForm.cs">
       <SubType>Form</SubType>
@@ -256,11 +274,17 @@
     <EmbeddedResource Include="Form\AirplanesForm.resx">
       <DependentUpon>AirplanesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\crewAdminForm.resx">
+      <DependentUpon>crewAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\CrewForm.resx">
       <DependentUpon>CrewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\CrewMemberForm.resx">
       <DependentUpon>CrewMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\flightsAdminForm.resx">
+      <DependentUpon>flightsAdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FlightsForm.resx">
       <DependentUpon>FlightsForm.cs</DependentUpon>
@@ -270,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\QueryForm.resx">
       <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ticketsAdminForm.resx">
+      <DependentUpon>ticketsAdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\TicketsForm.resx">
       <DependentUpon>TicketsForm.cs</DependentUpon>

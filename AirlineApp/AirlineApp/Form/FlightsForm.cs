@@ -17,45 +17,15 @@ namespace AirlineApp.Form
             InitializeComponent();
         }
 
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            flightsBindingSource.AddNew();
-        }
-
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Вы действительно хотите удалить эту запись?", "Удаление записи",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                flightsBindingSource.RemoveCurrent();
-                flightsTableAdapter.Update(airlinesDataSet);
-                MessageBox.Show("Запись удалена.");
-            }
-        }
-
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-            flightsBindingSource.EndEdit();
-            flightsTableAdapter.Update(airlinesDataSet);
-        }
-
         private void flightsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.flightsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.airlinesDataSet);
-        }
-
-        private void FlightsForm_Load(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.Flights". При необходимости она может быть перемещена или удалена.
-            this.flightsTableAdapter.Fill(this.airlinesDataSet.Flights);
         }
 
         private void tbFilter_TextChanged(object sender, EventArgs e)
         {
             if (cbFilter.SelectedItem == null) return;
-            var bs = (BindingSource)flightsDataGridView.DataSource;
+            var bs = (BindingSource)v1DataGridView.DataSource;
             var dv = (DataView)bs.List;
             var selectedText = cbFilter.SelectedItem.ToString().ToLower();
             dv.RowFilter = $"{selectedText} LIKE '%{tbFilter.Text.ToLower()}%'";
@@ -64,7 +34,7 @@ namespace AirlineApp.Form
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFilter.SelectedItem == null) return;
-            var bs = (BindingSource)flightsDataGridView.DataSource;
+            var bs = (BindingSource)v1DataGridView.DataSource;
             var dv = (DataView)bs.List;
             var selectedText = cbFilter.SelectedItem.ToString().ToLower();
             dv.RowFilter = $"{selectedText} LIKE '%{tbFilter.Text.ToLower()}%'";
@@ -74,6 +44,14 @@ namespace AirlineApp.Form
         {
             this.Hide();
             Home.Instance.Show();
+        }
+
+        private void FlightsForm_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.V1". При необходимости она может быть перемещена или удалена.
+            this.v1TableAdapter.Fill(this.airlinesDataSet.V1);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.V1". При необходимости она может быть перемещена или удалена.
+            this.v1TableAdapter.Fill(this.airlinesDataSet.V1);
         }
     }
 }

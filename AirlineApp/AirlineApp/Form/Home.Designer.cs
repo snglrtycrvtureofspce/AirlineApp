@@ -43,6 +43,7 @@
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.UserPanel = new Guna.UI.WinForms.GunaPanel();
+            this.sellTicketsButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.flightsButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.btnBasket = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -61,7 +62,9 @@
             this.UserPicture = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.TopPanel = new Guna.UI.WinForms.GunaShadowPanel();
             this.UserName = new Guna.UI.WinForms.GunaLabel();
-            this.sellTicketsButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.crewAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.ticketsAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.flightsAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.AdminPanel.SuspendLayout();
@@ -104,6 +107,9 @@
             // 
             // AdminPanel
             // 
+            this.AdminPanel.Controls.Add(this.flightsAdminButton);
+            this.AdminPanel.Controls.Add(this.ticketsAdminButton);
+            this.AdminPanel.Controls.Add(this.crewAdminButton);
             this.AdminPanel.Controls.Add(this.passengersButton);
             this.AdminPanel.Controls.Add(this.crewMemberButton);
             this.AdminPanel.Controls.Add(this.airplanesButton);
@@ -114,7 +120,7 @@
             this.AdminPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AdminPanel.Location = new System.Drawing.Point(0, 80);
             this.AdminPanel.Name = "AdminPanel";
-            this.AdminPanel.Size = new System.Drawing.Size(170, 176);
+            this.AdminPanel.Size = new System.Drawing.Size(170, 270);
             this.AdminPanel.TabIndex = 6;
             this.AdminPanel.Visible = false;
             // 
@@ -331,10 +337,45 @@
             this.UserPanel.Controls.Add(this.queryButton);
             this.UserPanel.Controls.Add(this.gunaPanel3);
             this.UserPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UserPanel.Location = new System.Drawing.Point(0, 256);
+            this.UserPanel.Location = new System.Drawing.Point(0, 350);
             this.UserPanel.Name = "UserPanel";
             this.UserPanel.Size = new System.Drawing.Size(170, 272);
             this.UserPanel.TabIndex = 7;
+            // 
+            // sellTicketsButton
+            // 
+            this.sellTicketsButton.AnimationHoverSpeed = 0.07F;
+            this.sellTicketsButton.AnimationSpeed = 0.03F;
+            this.sellTicketsButton.BaseColor = System.Drawing.Color.White;
+            this.sellTicketsButton.BorderColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.sellTicketsButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.CheckedImage = null;
+            this.sellTicketsButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.sellTicketsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sellTicketsButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.sellTicketsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sellTicketsButton.FocusedColor = System.Drawing.Color.Empty;
+            this.sellTicketsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sellTicketsButton.ForeColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.Image = null;
+            this.sellTicketsButton.ImageOffsetX = 5;
+            this.sellTicketsButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.sellTicketsButton.LineColor = System.Drawing.SystemColors.Control;
+            this.sellTicketsButton.Location = new System.Drawing.Point(0, 161);
+            this.sellTicketsButton.Name = "sellTicketsButton";
+            this.sellTicketsButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.sellTicketsButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.OnHoverImage = null;
+            this.sellTicketsButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.sellTicketsButton.OnPressedColor = System.Drawing.Color.Black;
+            this.sellTicketsButton.Size = new System.Drawing.Size(170, 30);
+            this.sellTicketsButton.TabIndex = 10;
+            this.sellTicketsButton.Text = "Продажа билетов";
+            this.sellTicketsButton.TextOffsetX = 10;
+            this.sellTicketsButton.Click += new System.EventHandler(this.sellTicketsButton_Click);
             // 
             // flightsButton
             // 
@@ -376,9 +417,9 @@
             this.gunaPanel1.Controls.Add(this.btnBasket);
             this.gunaPanel1.Controls.Add(this.gunaPanel5);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 184);
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 197);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(170, 88);
+            this.gunaPanel1.Size = new System.Drawing.Size(170, 75);
             this.gunaPanel1.TabIndex = 8;
             this.gunaPanel1.Visible = false;
             // 
@@ -677,40 +718,110 @@
             this.UserName.UseMnemonic = false;
             this.UserName.Visible = false;
             // 
-            // sellTicketsButton
+            // crewAdminButton
             // 
-            this.sellTicketsButton.AnimationHoverSpeed = 0.07F;
-            this.sellTicketsButton.AnimationSpeed = 0.03F;
-            this.sellTicketsButton.BaseColor = System.Drawing.Color.White;
-            this.sellTicketsButton.BorderColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.sellTicketsButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.CheckedForeColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.CheckedImage = null;
-            this.sellTicketsButton.CheckedLineColor = System.Drawing.Color.Gray;
-            this.sellTicketsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sellTicketsButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.sellTicketsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sellTicketsButton.FocusedColor = System.Drawing.Color.Empty;
-            this.sellTicketsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.sellTicketsButton.ForeColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.Image = null;
-            this.sellTicketsButton.ImageOffsetX = 5;
-            this.sellTicketsButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.sellTicketsButton.LineColor = System.Drawing.SystemColors.Control;
-            this.sellTicketsButton.Location = new System.Drawing.Point(0, 161);
-            this.sellTicketsButton.Name = "sellTicketsButton";
-            this.sellTicketsButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
-            this.sellTicketsButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.OnHoverForeColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.OnHoverImage = null;
-            this.sellTicketsButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
-            this.sellTicketsButton.OnPressedColor = System.Drawing.Color.Black;
-            this.sellTicketsButton.Size = new System.Drawing.Size(170, 30);
-            this.sellTicketsButton.TabIndex = 10;
-            this.sellTicketsButton.Text = "Продажа билетов";
-            this.sellTicketsButton.TextOffsetX = 10;
-            this.sellTicketsButton.Click += new System.EventHandler(this.sellTicketsButton_Click);
+            this.crewAdminButton.AnimationHoverSpeed = 0.07F;
+            this.crewAdminButton.AnimationSpeed = 0.03F;
+            this.crewAdminButton.BaseColor = System.Drawing.Color.White;
+            this.crewAdminButton.BorderColor = System.Drawing.Color.Black;
+            this.crewAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.crewAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.crewAdminButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.crewAdminButton.CheckedImage = null;
+            this.crewAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.crewAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.crewAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.crewAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.crewAdminButton.FocusedColor = System.Drawing.Color.Empty;
+            this.crewAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.crewAdminButton.ForeColor = System.Drawing.Color.Black;
+            this.crewAdminButton.Image = null;
+            this.crewAdminButton.ImageOffsetX = 5;
+            this.crewAdminButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.crewAdminButton.LineColor = System.Drawing.SystemColors.Control;
+            this.crewAdminButton.Location = new System.Drawing.Point(0, 172);
+            this.crewAdminButton.Name = "crewAdminButton";
+            this.crewAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.crewAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.crewAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.crewAdminButton.OnHoverImage = null;
+            this.crewAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.crewAdminButton.OnPressedColor = System.Drawing.Color.Black;
+            this.crewAdminButton.Size = new System.Drawing.Size(170, 30);
+            this.crewAdminButton.TabIndex = 14;
+            this.crewAdminButton.Text = "Экипаж";
+            this.crewAdminButton.TextOffsetX = 10;
+            this.crewAdminButton.Click += new System.EventHandler(this.crewAdminButton_Click);
+            // 
+            // ticketsAdminButton
+            // 
+            this.ticketsAdminButton.AnimationHoverSpeed = 0.07F;
+            this.ticketsAdminButton.AnimationSpeed = 0.03F;
+            this.ticketsAdminButton.BaseColor = System.Drawing.Color.White;
+            this.ticketsAdminButton.BorderColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.ticketsAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.CheckedImage = null;
+            this.ticketsAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.ticketsAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ticketsAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ticketsAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ticketsAdminButton.FocusedColor = System.Drawing.Color.Empty;
+            this.ticketsAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ticketsAdminButton.ForeColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.Image = null;
+            this.ticketsAdminButton.ImageOffsetX = 5;
+            this.ticketsAdminButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.ticketsAdminButton.LineColor = System.Drawing.SystemColors.Control;
+            this.ticketsAdminButton.Location = new System.Drawing.Point(0, 202);
+            this.ticketsAdminButton.Name = "ticketsAdminButton";
+            this.ticketsAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.ticketsAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.OnHoverImage = null;
+            this.ticketsAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.ticketsAdminButton.OnPressedColor = System.Drawing.Color.Black;
+            this.ticketsAdminButton.Size = new System.Drawing.Size(170, 30);
+            this.ticketsAdminButton.TabIndex = 15;
+            this.ticketsAdminButton.Text = "Билеты";
+            this.ticketsAdminButton.TextOffsetX = 10;
+            this.ticketsAdminButton.Click += new System.EventHandler(this.ticketsAdminButton_Click);
+            // 
+            // flightsAdminButton
+            // 
+            this.flightsAdminButton.AnimationHoverSpeed = 0.07F;
+            this.flightsAdminButton.AnimationSpeed = 0.03F;
+            this.flightsAdminButton.BaseColor = System.Drawing.Color.White;
+            this.flightsAdminButton.BorderColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.flightsAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.CheckedImage = null;
+            this.flightsAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.flightsAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flightsAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.flightsAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flightsAdminButton.FocusedColor = System.Drawing.Color.Empty;
+            this.flightsAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.flightsAdminButton.ForeColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.Image = null;
+            this.flightsAdminButton.ImageOffsetX = 5;
+            this.flightsAdminButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.flightsAdminButton.LineColor = System.Drawing.SystemColors.Control;
+            this.flightsAdminButton.Location = new System.Drawing.Point(0, 232);
+            this.flightsAdminButton.Name = "flightsAdminButton";
+            this.flightsAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.flightsAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.OnHoverImage = null;
+            this.flightsAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.flightsAdminButton.OnPressedColor = System.Drawing.Color.Black;
+            this.flightsAdminButton.Size = new System.Drawing.Size(170, 30);
+            this.flightsAdminButton.TabIndex = 16;
+            this.flightsAdminButton.Text = "Полёты";
+            this.flightsAdminButton.TextOffsetX = 10;
+            this.flightsAdminButton.Click += new System.EventHandler(this.flightsAdminButton_Click);
             // 
             // Home
             // 
@@ -779,5 +890,8 @@
         private Guna.UI.WinForms.GunaAdvenceButton flightsButton;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaAdvenceButton sellTicketsButton;
+        public Guna.UI.WinForms.GunaAdvenceButton flightsAdminButton;
+        public Guna.UI.WinForms.GunaAdvenceButton ticketsAdminButton;
+        public Guna.UI.WinForms.GunaAdvenceButton crewAdminButton;
     }
 }

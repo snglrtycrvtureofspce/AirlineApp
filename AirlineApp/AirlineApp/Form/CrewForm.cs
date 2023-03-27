@@ -18,32 +18,10 @@ namespace AirlineApp.Form
             InitializeComponent();
         }
 
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            crewBindingSource.AddNew();
-        }
-
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Вы действительно хотите удалить эту запись?", "Удаление записи",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                crewBindingSource.RemoveCurrent();
-                crewTableAdapter.Update(airlinesDataSet);
-                MessageBox.Show("Запись удалена.");
-            }
-        }
-
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-            crewBindingSource.EndEdit();
-            crewTableAdapter.Update(airlinesDataSet);
-        }
-
         private void tbFilter_TextChanged(object sender, EventArgs e)
         {
             if (cbFilter.SelectedItem == null) return;
-            var bs = (BindingSource)crewDataGridView.DataSource;
+            var bs = (BindingSource)v2DataGridView.DataSource;
             var dv = (DataView)bs.List;
             var selectedText = cbFilter.SelectedItem.ToString().ToLower();
             dv.RowFilter = $"{selectedText} LIKE '%{tbFilter.Text.ToLower()}%'";
@@ -52,7 +30,7 @@ namespace AirlineApp.Form
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFilter.SelectedItem == null) return;
-            var bs = (BindingSource)crewDataGridView.DataSource;
+            var bs = (BindingSource)v2DataGridView.DataSource;
             var dv = (DataView)bs.List;
             var selectedText = cbFilter.SelectedItem.ToString().ToLower();
             dv.RowFilter = $"{selectedText} LIKE '%{tbFilter.Text.ToLower()}%'";
@@ -61,14 +39,13 @@ namespace AirlineApp.Form
         private void crewBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.crewBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.airlinesDataSet);
         }
 
         private void CrewForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.Crew". При необходимости она может быть перемещена или удалена.
-            this.crewTableAdapter.Fill(this.airlinesDataSet.Crew);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "airlinesDataSet.V2". При необходимости она может быть перемещена или удалена.
+            this.v2TableAdapter.Fill(this.airlinesDataSet.V2);
         }
 
         private void CrewForm_FormClosing(object sender, FormClosingEventArgs e)

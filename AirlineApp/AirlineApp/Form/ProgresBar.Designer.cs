@@ -87,7 +87,7 @@ namespace AirlineApp.Form
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProgresBar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "E-Automize";
+            this.Text = "AirlineApp";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProgresBar_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ProgresBar_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();

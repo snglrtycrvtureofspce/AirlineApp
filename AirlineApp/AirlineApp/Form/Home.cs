@@ -359,5 +359,26 @@ namespace AirlineApp.Form
                 connection.Close();
             }
         }
+
+        private void crewAdminButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            crewAdminForm crewAdminForm = new crewAdminForm();
+            crewAdminForm.Show();
+        }
+
+        private void ticketsAdminButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ticketsAdminForm ticketsAdminForm = new ticketsAdminForm();
+            ticketsAdminForm.Show();
+        }
+
+        private void flightsAdminButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            flightsAdminForm flightsAdminForm = new flightsAdminForm();
+            flightsAdminForm.Show();
+        }
     }
 }

@@ -29,118 +29,48 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label departureDateLabel;
-            System.Windows.Forms.Label departureTimeLabel;
-            System.Windows.Forms.Label departureAirportLabel;
-            System.Windows.Forms.Label arrivalAirportLabel;
-            System.Windows.Forms.Label distanceLabel;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightsForm));
+            this.tbFilter = new System.Windows.Forms.TextBox();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
             this.airlinesDataSet = new AirlineApp.airlinesDataSet();
-            this.flightsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flightsTableAdapter = new AirlineApp.airlinesDataSetTableAdapters.FlightsTableAdapter();
+            this.v1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v1TableAdapter = new AirlineApp.airlinesDataSetTableAdapters.V1TableAdapter();
             this.tableAdapterManager = new AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager();
-            this.flightsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.v1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.flightsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.flightsDataGridView = new System.Windows.Forms.DataGridView();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.v1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.v1DataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departureDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.departureTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.departureAirportTextBox = new System.Windows.Forms.TextBox();
-            this.arrivalAirportTextBox = new System.Windows.Forms.TextBox();
-            this.distanceTextBox = new System.Windows.Forms.TextBox();
-            this.tbFilter = new System.Windows.Forms.TextBox();
-            this.cbFilter = new System.Windows.Forms.ComboBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
-            departureDateLabel = new System.Windows.Forms.Label();
-            departureTimeLabel = new System.Windows.Forms.Label();
-            departureAirportLabel = new System.Windows.Forms.Label();
-            arrivalAirportLabel = new System.Windows.Forms.Label();
-            distanceLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).BeginInit();
-            this.flightsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v1BindingNavigator)).BeginInit();
+            this.v1BindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v1DataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // departureDateLabel
-            // 
-            departureDateLabel.AutoSize = true;
-            departureDateLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            departureDateLabel.Location = new System.Drawing.Point(12, 262);
-            departureDateLabel.Name = "departureDateLabel";
-            departureDateLabel.Size = new System.Drawing.Size(103, 16);
-            departureDateLabel.TabIndex = 6;
-            departureDateLabel.Text = "Дата вылета:";
-            // 
-            // departureTimeLabel
-            // 
-            departureTimeLabel.AutoSize = true;
-            departureTimeLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            departureTimeLabel.Location = new System.Drawing.Point(12, 288);
-            departureTimeLabel.Name = "departureTimeLabel";
-            departureTimeLabel.Size = new System.Drawing.Size(111, 16);
-            departureTimeLabel.TabIndex = 8;
-            departureTimeLabel.Text = "Время вылета:";
-            // 
-            // departureAirportLabel
-            // 
-            departureAirportLabel.AutoSize = true;
-            departureAirportLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            departureAirportLabel.Location = new System.Drawing.Point(12, 313);
-            departureAirportLabel.Name = "departureAirportLabel";
-            departureAirportLabel.Size = new System.Drawing.Size(135, 16);
-            departureAirportLabel.TabIndex = 10;
-            departureAirportLabel.Text = "Аэропорт вылета:";
-            // 
-            // arrivalAirportLabel
-            // 
-            arrivalAirportLabel.AutoSize = true;
-            arrivalAirportLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            arrivalAirportLabel.Location = new System.Drawing.Point(12, 339);
-            arrivalAirportLabel.Name = "arrivalAirportLabel";
-            arrivalAirportLabel.Size = new System.Drawing.Size(167, 16);
-            arrivalAirportLabel.TabIndex = 12;
-            arrivalAirportLabel.Text = "Аэропорт назначения:";
-            // 
-            // distanceLabel
-            // 
-            distanceLabel.AutoSize = true;
-            distanceLabel.Font = new System.Drawing.Font("Courier New", 9.75F);
-            distanceLabel.Location = new System.Drawing.Point(12, 365);
-            distanceLabel.Name = "distanceLabel";
-            distanceLabel.Size = new System.Drawing.Size(95, 16);
-            distanceLabel.TabIndex = 14;
-            distanceLabel.Text = "Расстояние:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Courier New", 9.75F);
-            label2.Location = new System.Drawing.Point(406, 390);
+            label2.Location = new System.Drawing.Point(238, 268);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(79, 16);
             label2.TabIndex = 59;
@@ -150,45 +80,66 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Courier New", 9.75F);
-            label1.Location = new System.Drawing.Point(12, 390);
+            label1.Location = new System.Drawing.Point(12, 268);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(95, 16);
             label1.TabIndex = 57;
             label1.Text = "Фильтрация:";
+            // 
+            // tbFilter
+            // 
+            this.tbFilter.Location = new System.Drawing.Point(113, 264);
+            this.tbFilter.Name = "tbFilter";
+            this.tbFilter.Size = new System.Drawing.Size(119, 20);
+            this.tbFilter.TabIndex = 58;
+            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            // 
+            // cbFilter
+            // 
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "DepartureAirport",
+            "ArrivalAirport"});
+            this.cbFilter.Location = new System.Drawing.Point(323, 266);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(236, 21);
+            this.cbFilter.TabIndex = 56;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // airlinesDataSet
             // 
             this.airlinesDataSet.DataSetName = "airlinesDataSet";
             this.airlinesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // flightsBindingSource
+            // v1BindingSource
             // 
-            this.flightsBindingSource.DataMember = "Flights";
-            this.flightsBindingSource.DataSource = this.airlinesDataSet;
+            this.v1BindingSource.DataMember = "V1";
+            this.v1BindingSource.DataSource = this.airlinesDataSet;
             // 
-            // flightsTableAdapter
+            // v1TableAdapter
             // 
-            this.flightsTableAdapter.ClearBeforeFill = true;
+            this.v1TableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AirplanesTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.CrewMemberTableAdapter = null;
             this.tableAdapterManager.CrewTableAdapter = null;
-            this.tableAdapterManager.FlightsTableAdapter = this.flightsTableAdapter;
+            this.tableAdapterManager.FlightsTableAdapter = null;
             this.tableAdapterManager.PassengersTableAdapter = null;
             this.tableAdapterManager.PeopleTableAdapter = null;
             this.tableAdapterManager.TicketsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AirlineApp.airlinesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // flightsBindingNavigator
+            // v1BindingNavigator
             // 
-            this.flightsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.flightsBindingNavigator.BindingSource = this.flightsBindingSource;
-            this.flightsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.flightsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.flightsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.v1BindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.v1BindingNavigator.BindingSource = this.v1BindingSource;
+            this.v1BindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.v1BindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.v1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -200,42 +151,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.flightsBindingNavigatorSaveItem});
-            this.flightsBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.flightsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.flightsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.flightsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.flightsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.flightsBindingNavigator.Name = "flightsBindingNavigator";
-            this.flightsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.flightsBindingNavigator.Size = new System.Drawing.Size(763, 25);
-            this.flightsBindingNavigator.TabIndex = 0;
-            this.flightsBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.v1BindingNavigatorSaveItem});
+            this.v1BindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.v1BindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.v1BindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.v1BindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.v1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.v1BindingNavigator.Name = "v1BindingNavigator";
+            this.v1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.v1BindingNavigator.Size = new System.Drawing.Size(573, 25);
+            this.v1BindingNavigator.TabIndex = 60;
+            this.v1BindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -264,16 +190,22 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -281,7 +213,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -290,204 +222,98 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
             // 
-            // flightsBindingNavigatorSaveItem
+            // bindingNavigatorAddNewItem
             // 
-            this.flightsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.flightsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("flightsBindingNavigatorSaveItem.Image")));
-            this.flightsBindingNavigatorSaveItem.Name = "flightsBindingNavigatorSaveItem";
-            this.flightsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.flightsBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.flightsBindingNavigatorSaveItem.Click += new System.EventHandler(this.flightsBindingNavigatorSaveItem_Click);
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
-            // flightsDataGridView
+            // bindingNavigatorDeleteItem
             // 
-            this.flightsDataGridView.AutoGenerateColumns = false;
-            this.flightsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.flightsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // v1BindingNavigatorSaveItem
+            // 
+            this.v1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.v1BindingNavigatorSaveItem.Enabled = false;
+            this.v1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("v1BindingNavigatorSaveItem.Image")));
+            this.v1BindingNavigatorSaveItem.Name = "v1BindingNavigatorSaveItem";
+            this.v1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 20);
+            this.v1BindingNavigatorSaveItem.Text = "Сохранить данные";
+            // 
+            // v1DataGridView
+            // 
+            this.v1DataGridView.AutoGenerateColumns = false;
+            this.v1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.v1DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.flightsDataGridView.DataSource = this.flightsBindingSource;
-            this.flightsDataGridView.Location = new System.Drawing.Point(12, 28);
-            this.flightsDataGridView.Name = "flightsDataGridView";
-            this.flightsDataGridView.Size = new System.Drawing.Size(742, 220);
-            this.flightsDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn5});
+            this.v1DataGridView.DataSource = this.v1BindingSource;
+            this.v1DataGridView.Location = new System.Drawing.Point(15, 28);
+            this.v1DataGridView.Name = "v1DataGridView";
+            this.v1DataGridView.Size = new System.Drawing.Size(544, 220);
+            this.v1DataGridView.TabIndex = 60;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "FlightID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "FlightID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "DepartureDate";
+            this.dataGridViewTextBoxColumn1.HeaderText = "DepartureDate";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "AirplaneID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "AirplaneID";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DepartureTime";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DepartureTime";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "DepartureDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "DepartureDate";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DepartureAirport";
+            this.dataGridViewTextBoxColumn3.HeaderText = "DepartureAirport";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "DepartureTime";
-            this.dataGridViewTextBoxColumn4.HeaderText = "DepartureTime";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ArrivalAirport";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ArrivalAirport";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "DepartureAirport";
-            this.dataGridViewTextBoxColumn5.HeaderText = "DepartureAirport";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Distance";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Distance";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ArrivalAirport";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ArrivalAirport";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Distance";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Distance";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // departureDateDateTimePicker
-            // 
-            this.departureDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.flightsBindingSource, "DepartureDate", true));
-            this.departureDateDateTimePicker.Location = new System.Drawing.Point(185, 257);
-            this.departureDateDateTimePicker.Name = "departureDateDateTimePicker";
-            this.departureDateDateTimePicker.Size = new System.Drawing.Size(218, 20);
-            this.departureDateDateTimePicker.TabIndex = 7;
-            // 
-            // departureTimeDateTimePicker
-            // 
-            this.departureTimeDateTimePicker.CustomFormat = "HH:mm";
-            this.departureTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.flightsBindingSource, "DepartureTime", true));
-            this.departureTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.departureTimeDateTimePicker.Location = new System.Drawing.Point(185, 284);
-            this.departureTimeDateTimePicker.Name = "departureTimeDateTimePicker";
-            this.departureTimeDateTimePicker.ShowUpDown = true;
-            this.departureTimeDateTimePicker.Size = new System.Drawing.Size(218, 20);
-            this.departureTimeDateTimePicker.TabIndex = 9;
-            // 
-            // departureAirportTextBox
-            // 
-            this.departureAirportTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "DepartureAirport", true));
-            this.departureAirportTextBox.Location = new System.Drawing.Point(185, 311);
-            this.departureAirportTextBox.Name = "departureAirportTextBox";
-            this.departureAirportTextBox.Size = new System.Drawing.Size(218, 20);
-            this.departureAirportTextBox.TabIndex = 11;
-            // 
-            // arrivalAirportTextBox
-            // 
-            this.arrivalAirportTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "ArrivalAirport", true));
-            this.arrivalAirportTextBox.Location = new System.Drawing.Point(185, 337);
-            this.arrivalAirportTextBox.Name = "arrivalAirportTextBox";
-            this.arrivalAirportTextBox.Size = new System.Drawing.Size(218, 20);
-            this.arrivalAirportTextBox.TabIndex = 13;
-            // 
-            // distanceTextBox
-            // 
-            this.distanceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "Distance", true));
-            this.distanceTextBox.Location = new System.Drawing.Point(185, 363);
-            this.distanceTextBox.Name = "distanceTextBox";
-            this.distanceTextBox.Size = new System.Drawing.Size(218, 20);
-            this.distanceTextBox.TabIndex = 15;
-            // 
-            // tbFilter
-            // 
-            this.tbFilter.Location = new System.Drawing.Point(185, 388);
-            this.tbFilter.Name = "tbFilter";
-            this.tbFilter.Size = new System.Drawing.Size(218, 20);
-            this.tbFilter.TabIndex = 58;
-            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
-            // 
-            // cbFilter
-            // 
-            this.cbFilter.FormattingEnabled = true;
-            this.cbFilter.Items.AddRange(new object[] {
-            "DepartureAirport",
-            "ArrivalAirport"});
-            this.cbFilter.Location = new System.Drawing.Point(491, 388);
-            this.cbFilter.Name = "cbFilter";
-            this.cbFilter.Size = new System.Drawing.Size(260, 21);
-            this.cbFilter.TabIndex = 56;
-            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
-            // 
-            // saveButton
-            // 
-            this.saveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.saveButton.Location = new System.Drawing.Point(409, 309);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(342, 72);
-            this.saveButton.TabIndex = 62;
-            this.saveButton.Text = "Сохранить";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.deleteButton.Location = new System.Drawing.Point(579, 256);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(172, 47);
-            this.deleteButton.TabIndex = 61;
-            this.deleteButton.Text = "Удалить";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-            // 
-            // addButton
-            // 
-            this.addButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.addButton.Location = new System.Drawing.Point(409, 256);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(164, 47);
-            this.addButton.TabIndex = 60;
-            this.addButton.Text = "Добавить";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 417);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.addButton);
+            this.ClientSize = new System.Drawing.Size(573, 301);
+            this.Controls.Add(this.v1DataGridView);
+            this.Controls.Add(this.v1BindingNavigator);
             this.Controls.Add(label2);
             this.Controls.Add(this.tbFilter);
             this.Controls.Add(label1);
             this.Controls.Add(this.cbFilter);
-            this.Controls.Add(departureDateLabel);
-            this.Controls.Add(this.departureDateDateTimePicker);
-            this.Controls.Add(departureTimeLabel);
-            this.Controls.Add(this.departureTimeDateTimePicker);
-            this.Controls.Add(departureAirportLabel);
-            this.Controls.Add(this.departureAirportTextBox);
-            this.Controls.Add(arrivalAirportLabel);
-            this.Controls.Add(this.arrivalAirportTextBox);
-            this.Controls.Add(distanceLabel);
-            this.Controls.Add(this.distanceTextBox);
-            this.Controls.Add(this.flightsDataGridView);
-            this.Controls.Add(this.flightsBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(400, 55);
             this.Name = "FlightsForm";
@@ -496,11 +322,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FlightsForm_FormClosing);
             this.Load += new System.EventHandler(this.FlightsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.airlinesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).EndInit();
-            this.flightsBindingNavigator.ResumeLayout(false);
-            this.flightsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flightsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v1BindingNavigator)).EndInit();
+            this.v1BindingNavigator.ResumeLayout(false);
+            this.v1BindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v1DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,10 +335,12 @@
         #endregion
 
         private airlinesDataSet airlinesDataSet;
-        private System.Windows.Forms.BindingSource flightsBindingSource;
-        private airlinesDataSetTableAdapters.FlightsTableAdapter flightsTableAdapter;
+        private System.Windows.Forms.TextBox tbFilter;
+        private System.Windows.Forms.ComboBox cbFilter;
+        private System.Windows.Forms.BindingSource v1BindingSource;
+        private airlinesDataSetTableAdapters.V1TableAdapter v1TableAdapter;
         private airlinesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator flightsBindingNavigator;
+        private System.Windows.Forms.BindingNavigator v1BindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -524,24 +352,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton flightsBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView flightsDataGridView;
+        private System.Windows.Forms.ToolStripButton v1BindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView v1DataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DateTimePicker departureDateDateTimePicker;
-        private System.Windows.Forms.DateTimePicker departureTimeDateTimePicker;
-        private System.Windows.Forms.TextBox departureAirportTextBox;
-        private System.Windows.Forms.TextBox arrivalAirportTextBox;
-        private System.Windows.Forms.TextBox distanceTextBox;
-        private System.Windows.Forms.TextBox tbFilter;
-        private System.Windows.Forms.ComboBox cbFilter;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button addButton;
     }
 }
