@@ -3,6 +3,14 @@
 use airlines
 
 go
+CREATE TABLE People
+(
+id INT IDENTITY(1,1) PRIMARY KEY,
+username VARCHAR(50) NOT NULL,
+password VARCHAR(50) NOT NULL,
+name VARCHAR(50) NOT NULL,
+surname  VARCHAR(50) NOT NULL
+)
 CREATE TABLE Airplanes
 (
 AirplaneID INT IDENTITY(1,1) PRIMARY KEY,
@@ -65,6 +73,10 @@ SeatType VARCHAR(10) NOT NULL,
 FOREIGN KEY (FlightID) REFERENCES Flights (FlightID),
 FOREIGN KEY (PassengerID) REFERENCES Passengers (PassengerID)
 )
+
+INSERT INTO People (username, password, name, surname)
+VALUES
+('admin', 'admin', 'admin', 'admin');
 
 INSERT INTO Airplanes (RegistrationNumber, Type, NumberOfSeats, Payload, Speed, ManufactureDate, FlightHours, LastRepairDate, Destination, FuelConsumption)
 VALUES

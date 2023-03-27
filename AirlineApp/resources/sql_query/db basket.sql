@@ -1,0 +1,5 @@
+﻿CREATE TABLE basket
+(
+name VARCHAR(50) NOT NULL,
+price VARCHAR(50) NOT NULL;
+)
