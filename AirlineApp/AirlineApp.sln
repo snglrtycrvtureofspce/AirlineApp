@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineApp", "AirlineApp\AirlineApp.csproj", "{EDDAB1A8-B6AF-4568-97B8-AC703B0CD932}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{889E514E-2E15-4B1E-8951-78B0E36012CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{EDDAB1A8-B6AF-4568-97B8-AC703B0CD932}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDAB1A8-B6AF-4568-97B8-AC703B0CD932}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDAB1A8-B6AF-4568-97B8-AC703B0CD932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889E514E-2E15-4B1E-8951-78B0E36012CF}.Debug|Any CPU.ActiveCfg = Debug
+		{889E514E-2E15-4B1E-8951-78B0E36012CF}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

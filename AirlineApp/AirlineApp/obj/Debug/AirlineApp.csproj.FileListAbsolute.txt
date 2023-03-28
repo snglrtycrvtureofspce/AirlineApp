@@ -62,7 +62,6 @@ C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\Debug\AirlineApp.exe
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\Debug\AirlineApp.pdb
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\Debug\Guna.UI2.dll
-C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\Debug\Guna.UI.pdb
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\Debug\AirlineApp.csproj.AssemblyReference.cache
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\Debug\AirlineApp.csproj.SuggestedBindingRedirects.cache
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\Debug\AirlineApp.Control.ElControls.ElOrderList.resources
@@ -97,3 +96,5 @@ C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\Debug\AirlineApp.Form.crewAdminForm.resources
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\Debug\AirlineApp.Form.flightsAdminForm.resources
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\obj\Debug\AirlineApp.Form.ticketsAdminForm.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\Debug\airlines.mdf
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\AirlineApp\AirlineApp\AirlineApp\bin\Debug\airlines_log.ldf
